@@ -11,36 +11,11 @@
 <link href="css/base.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="js/device.js"></script>
 <script type="text/javascript">
+document.write('<script type="text/javascript" src="js/pad.js"><\/script>');
 
-	var $winW = screen.width;
+document.write('<script type="text/javascript" src="js/my.js"><\/script>');
+document.write('<link rel="stylesheet" rev="stylesheet" href="css/pcZ.css" type="text/css" />');
 
-	if(device.type === "pad") {
-
-	    //document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">');
-
-		document.write('<meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>');
-
-		document.write('<script type="text/javascript" src="js/pad.js"><\/script>');
-
-		document.write('<link rel="stylesheet" rev="stylesheet" href="css/pad.css" type="text/css" />');
-
-	}else{
-
-		document.write('<script type="text/javascript" src="js/pad.js"><\/script>');
-
-		document.write('<script type="text/javascript" src="js/my.js"><\/script>');
-
-		if($winW>1024){
-
-			document.write('<link rel="stylesheet" rev="stylesheet" href="css/pad.css" type="text/css" />');
-
-		}else{
-
-			document.write('<link rel="stylesheet" rev="stylesheet" href="css/pcZ.css" type="text/css" />');
-
-		}
-
-	}
 </script>
 <script>
 	var fallback;
