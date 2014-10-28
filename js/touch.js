@@ -163,5 +163,3 @@
     $.fn[eventName] = function(callback){ return this.on(eventName, callback) }
   })
 })(Zepto)
-Status API Training Shop Blog About
-© 2014 GitHub, Inc. Terms Privacy Security Contact
