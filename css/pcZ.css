@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+body { line-height:20px;}
+.box{ width:970px; margin:0 auto; text-align:left;}
+.row{ _width:994px;}
+
+.bgW{ background:#fff;}
+.bgR{ background:#b41e16;}
+.bgG{ background:#6e6e6e;}
+.bgW{ padding:24px 0; text-align:center;}
+
+.mLose{ margin:0 -12px;}
+.mJust{ margin:0 12px;}
+.marB{ margin-bottom:24px;}
+
+.hidePc{ display:none;}
+
+.rankBox,.catchUpTV{ overflow:hidden; width:230px; position:relative;}
+.smgMake{ overflow:hidden; width:462px; position:relative;}
+.rankBox h2.tit,.smgMake h2.tit,.catchUpTV h2.tit,.mediaPerson h2.tit{ padding-top:40px; height:0px; overflow:hidden; margin:0px; background:#fff url(../images/tit.png) no-repeat; _background:url(../images/tit.gif) no-repeat; position:relative; line-height:100px;}
+.rankBox h2.tit{ background-position:0 -80px;}
+.smgMake h2.tit{ background-position:0 -40px;}
+.catchUpTV h2.tit{ background-position:0 0;}
+.mediaPerson h2.tit{ width:112px; background-position:0 -120px;}
+
+.rankList a,.smgMake a{ display:block;}
+
+/*--热点--*/
+.rankCon{ margin-top:-2px;}
+.rankList{ position:relative; padding-top:8px;}
+.rankList span.num{ position:absolute; z-index:10; left:0; top:6px; width:20px; height:20px; text-align:center; overflow:hidden; color:#fff; font-size:12px;}
+.rankList .pictit{ display:none;}
+.ranktxt{ border-bottom:1px solid #eee; position:relative; padding-left:32px; height:56px; _height:50px;}
+.ranktxt p{ margin-top:-6px; _margin-top:-4px; height:40px; overflow:hidden;}
+.ranktxt span.tag{ position:absolute; z-index:10; right:0; bottom:0; _bottom:-1px; padding:0 6px; height:16px; line-height:16px; overflow:hidden; text-align:center; background:#eee; color:#999; font-size:12px;}
+
+/*--SMG出品--*/
+.smgMakeTit{ position:absolute; z-index:10; right:-11px; top:3px;}
+.smgMakeTit span{ float:right; display:inline-block; padding:0 10px; border-right:1px dotted #dcdcdc; font-size:12px;}
+.smgMake ul{ width:474px; margin-top:-15px;}
+.smgMake li{ float:left; display:inline; padding-top:6px; padding-bottom:5px; margin-right:12px; margin-top:15px; width:146px; overflow:hidden; border-bottom:1px solid #c3c3c3;}
+.smgMake .pictit{ position:relative; height:83px; overflow:hidden;}
+.smgMake .pictit span.tag{ position:absolute; z-index:10; top:0; right:0; background:#607d8b; color:#fff; padding:0 10px; height:25px; line-height:25px; font-size:12px;}
+.smgMake .pictit img{ width:100%;}
+.smgMake .title{ font-weight:700; height:3em; overflow:hidden; margin-top:5px;}
+.smgMake span.time{ font-size:12px; color:#888; display:block; margin-top:5px; font-family:Arial;}
+
+/*--电视回看--*/
+.catchUpTVBox{ width:230px; overflow:hidden; margin-top:-10px;}
+.catchUpTVLeft{ float:left; display:inline;}
+.catchUpTVRight{ float:right; display:inline;}
+.catchUpTVLeft,.catchUpTVRight{ width:112px; overflow:hidden; padding-top:10px;}
+.catchUpTVLeft li,.catchUpTVRight li{ padding-top:6px; float:left; display:inline; width:112px;}
+.catchUpTVBox .hLink{ width:50px; overflow:hidden;}
+.catchUpTVBox a img{ display:block; width:100%;}
+
+/*--媒体人--*/
+.mediaPerson{ background:url(../images/line.gif) repeat-x 0 5px;}
+.mediaBox ul{ margin-top:-12px;}
+.mediaBox li{ float:left; display:inline; width:224px; overflow:hidden; margin:24px 12px 0 12px;}
+.mediaBox li .pictit{ width:80px; height:80px; overflow:hidden; position:relative;}
+.mediaBox li .pictit img{ display:block;}
+.mediaBox li .pictit span.name{ position:absolute; left:0; bottom:0; height:20px; line-height:20px; width:80px; text-align:center; color:#fff; font-size:12px; background:rgba(0,0,0,0.5);_background:#000;}
+.mediaBox li .newest{ border:1px solid #dbdbdb; border-left:0; background:#eee; height:78px; padding:0 12px; width:119px; overflow:hidden;}
+.mediaBox li .newest p.title{ font-weight:700; line-height:30px; height:30px; overflow:hidden;}
+.mediaBox li .newest p.intro{ height:40px; overflow:hidden;}
+
+
+
+
+/* pcZ.css */
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.bg_first{background:url(../images/first_bg.png) no-repeat center top;min-width:970px;}
+
+/*头块*/
+.area-wrapper{margin:0 auto;width:970px;text-align: left;}
+.area-wrapper .slide_show{position:relative;margin-bottom:30px;width:473px;height:290px;}
+.area-wrapper .slide_show .swiper-wrapper{position:relative;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;width:100%;-webkit-transition-timing-function:ease;-moz-transition-timing-function:ease;-o-transition-timing-function:ease;transition-timing-function:ease;-webkit-transition-duration:0s;-moz-transition-duration:0s;-o-transition-duration:0s;transition-duration:0s;-webkit-transition-property:-webkit-transform,left,top;-moz-transition-property:-moz-transform,left,top;-o-transition-property:-o-transform,left,top;transition-property:transform,left,top;-webkit-transform:translate3d(0px,0,0);-moz-transform:translate3d(0px,0,0);-o-transform:translate3d(0px,0,0);-o-transform:translate(0px,0px);transform:translate3d(0px,0,0);-ms-transition-property:-ms-transform,left,top;-ms-transition-duration:0s;-ms-transform:translate3d(0px,0,0);-ms-transition-timing-function:ease;}
+.area-wrapper .slide_show .swiper-container{width:473px;height:295px;background:url(../images/back.png) repeat;margin:0 auto;position:relative;overflow:hidden;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;backface-visibility:hidden;/* Fix of Webkit flickering */z-index:1;}
+.area-wrapper .slide_show .swiper-slide{width: 473px;float: left;position:relative;float:left;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;}
+.area-wrapper .slide_show .slide_block{position:relative;height:260px;width: 473px;}
+.area-wrapper .slide_show .slide_block img{width:473px;height:260px;}
+.area-wrapper .slide_show .slide_block .cover{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.2);}
+.area-wrapper .slide_show .swiper-slide .share,.pic .share{position:absolute;top:0;left:0;z-index:10;display:none;width:60px;height:28px;background:url(../images/share.png) no-repeat;}
+.area-wrapper .slide_show .swiper-slide .share i,.pic .share i{position:relative;z-index:10;float:left;width:30px;height:30px;cursor:pointer;}
+.area-wrapper .top-main .main-con{float:left;display:inline;width: 496px;}
+.area-wrapper .top-main .new-con{float:left;display:inline;font-family:"微软雅黑";line-height:20px;}
+.area-wrapper .slide_title{position:relative;height:35px;color:#fff;font-size:16px;font-family:"微软雅黑";line-height:35px;}
+
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-vertical{-ms-touch-action:pan-x;}
+.swiper-wp8-horizontal{-ms-touch-action:pan-y;}
+
+
+/*新闻图片文字*/
+.top-main .news_wrapper{float:left;display:inline;margin-right:24px;width:224px;}
+.top-main .news_wrapper .pic{height:125px;}
+.top-main .news_block .pic a img{display:block;width:100%;vertical-align:middle;}
+.top-main .news_block .pic{position:relative;}
+.top-main .news_block .pic a{display:block;}
+.top-main .news_block .pic span{position:absolute;bottom:0;left:0;z-index:3;display:block;width:100%;height:35px;background:#000;opacity:.5;-moz-opacity:.5;filter:alpha(opacity=50);}
+.top-main .news_block .pic em{position:absolute;bottom:0;left:0;z-index:4;display:block;overflow:hidden;width:100%;height:35px;color:#fff;text-align:center;font-weight:700;font-style:normal;font-size:12px;line-height:35px;}
+.top-main .txt{padding:6px 0 6px 10px;background:url(../images/back.png) repeat;}
+.top-main .txt li{padding-left:7px;background:url(../images/point.png) no-repeat left center;color:#000;font-size:14px;line-height:30px;}
+/*板块新闻*/
+.top-main .summary-l{margin-bottom:25px;padding:10px;width:443px;height:60px;border-bottom:1px solid #b0120a;background:url(../images/back.png) repeat;}
+.top-main .summary-l span{padding:0 1px;border-radius:3px;background:#b0120a;color:#fff;font-size:12px;}
+.top-main .summary-l a{color:#000;font-weight:700;font-size:15px;}
+.top-main .summary-l a.block-tit{margin-right:10px;}
+.top-main .summary-l p{color:#333;font-size:14px;}
+.top-main .summary-l .tab a{float:left;display:inline;padding:10px 4px 2px 0;font-weight:normal;font-size:12px;}
+.top-main .summary-s{position:relative;margin-bottom:31px;width:473px;}
+.top-main .tab-class{position:absolute;right:0;bottom:0;width:50px;height:25px;background:#b0120a;color:#fff;text-align:center;font-size:12px;line-height:25px;}
+.top-main .summary-s .summary{position:relative;padding:10px 10px;width:208px;height:60px;border-bottom:1px solid #b0120a;background:url(../images/back.png) repeat;font:15px/25px "微软雅黑";}
+.area-wrapper .tab-kp{font-weight:700;}
+.area-wrapper span.tab-title{margin-left:10px;color:#000;}
+.area-wrapper .tab-kp{font-weight:700;}
+.area-wrapper span.tab-con{display:inline-block;width:100px;height:35px;background:#b0120a;text-align:center;font-weight:700;}
+
+/*滚动点*/
+.slide_show .btn{line-height:0;}
+.slide_show .page{position:absolute;right:10px;bottom:10px;display:inline;z-index: 1000;}
+.slide_show .page span{display:inline-block;overflow:hidden;margin:0 1px;width:20px;height:5px;background:url(../images/line.png) no-repeat;background-position:-20px -36px;cursor:pointer;}
+.slide_show .page span.swiper-visible-switch{background-position:-20px -11px;}
+.slide_show .page span.swiper-active-switch{background-position:0 -11px;-moz-animation:a_slidercurrent 5s linear;-webkit-animation:a_slidercurrent 5s linear;-o-animation:a_slidercurrent 5s linear;animation:a_slidercurrent 5s linear;}
+@-moz-keyframes a_slidercurrent { from { background-position: -20px -11px; } to { background-position: 0px -11px;} }
+@-webkit-keyframes a_slidercurrent { from { background-position: -20px -11px; } to { background-position: 0px -11px;} }
+@-o-keyframes a_slidercurrent { from { background-position: -20px -11px; } to { background-position: 0px -11px;} }
+@keyframes a_slidercurrent{ from { background-position: -20px -11px; } to { background-position: 0px -11px;} }
+@-moz-keyframes a_slidercurrent_b{ from { background-position: -20px -11px; } to { background-position: 0px -11px;} }
+@-webkit-keyframes a_slidercurrent_b { from { background-position: -20px -11px; } to { background-position: 0px -11px;} }
+@-o-keyframes a_slidercurrent_b { from { background-position: -20px -11px; } to { background-position: 0px -11px;} }
+@keyframes a_slidercurrent_b { from { background-position: -20px -11px; } to { background-position: 0px -11px;} }
+
+
+
+
+
+
+
