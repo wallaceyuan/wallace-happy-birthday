@@ -8,15 +8,6 @@
 
 <title>无标题文档</title>
 
-<link href="css/base.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="js/device.js"></script>
-<script type="text/javascript">
-document.write('<script type="text/javascript" src="js/pad.js"><\/script>');
-
-document.write('<script type="text/javascript" src="js/my.js"><\/script>');
-document.write('<link rel="stylesheet" rev="stylesheet" href="css/pcZ.css" type="text/css" />');
-
-</script>
 <script>
 	var fallback;
 	if ('__proto__' in {}) {
@@ -27,6 +18,13 @@ document.write('<link rel="stylesheet" rev="stylesheet" href="css/pcZ.css" type=
 		fallback = 'jquery';
 	}
 </script>
+
+<link href="css/base.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" rev="stylesheet" href="css/pcZ.css" type="text/css" />
+<script type="text/javascript" src="js/pad.js"></script>
+<script type="text/javascript" src="js/my.js"></script>
+<script type="text/javascript" src="js/touch.js"></script>
+<script type="text/javascript" src="js/device.js"></script>
 
 </head>
 
@@ -211,7 +209,7 @@ document.write('<link rel="stylesheet" rev="stylesheet" href="css/pcZ.css" type=
 	})*/
 	console.log($('.slide_show'));
 
-$('.slide_show').tap(function () {
+$('.slide_show').touch(function () {
 	alert(1);
 });
 </script>
