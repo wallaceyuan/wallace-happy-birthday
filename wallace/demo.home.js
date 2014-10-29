@@ -1,8 +1,22 @@
 define({
   title: 'SPA - 打开新页面视图demo',
-  body: ' <ul class="img-container clearfix" id="container">\
-          </ul>\
-        ' ,
+  body: '<nav class="navbar navbar-default navbar-static-top" role="navigation">\
+         <div class="navbar-header">\
+         <a class="navbar-brand" href="#demo/newpage">首页面</a>\
+         </div>\
+         </nav>\
+         <div class="page-container-navbar">\
+           <div class="container">\
+             <div class="page-header"></div>\
+             <p><a href="#demo/newpage" class="btn btn-sm btn-info">打开新左页面视图</a></p>\
+             <p><a href="#demo/newpageright" class="btn btn-sm btn-info">打开新右页面视图</a></p>\
+             <p><a href="#" data-panel="demoPanelSidemenu" class="btn btn-sm btn-info btn-demo-panel">侧边栏菜单</a>\
+                <a href="#" data-panel="demoPanelAlert" class="btn btn-sm btn-info btn-demo-panel">提示对话框</a>\
+                <a href="#" data-panel="demoPanelConfirm" class="btn btn-sm btn-info btn-demo-panel">确认对话框</a>\
+             </p>\
+           </div>\
+         </div>\
+        ',
         init: function(pageData) {
           var $view = this
 
@@ -11,24 +25,7 @@ define({
             url = url || location.href
             return url.replace(/^[^#]*#?\/?(.*)\/?$/, '$1')
           }
-          var total = 17;
-          var zWin = $(window);
-          var render = function(){
-            var tmpl = '';
-            var padding = 2;
-            var scrollBarWidth = 0;
-            var winWidth = $(window).width();
-            var picWidth = Math.floor((winWidth-padding*3-scrollBarWidth)/4);
-            for(var i=1;i<=total;i++){
-              var p = padding;
-              if(i%4==1){
-                p = 0;
-              }
-              tmpl+='<li data-id="'+i+'" class="animated bounceIn" style="width:'+picWidth+'px;height:'+picWidth+'px;padding-left:'+p+'px;padding-top:'+padding+'px;"><img src="img/'+i+'.jpg"></li>';
-            }
-            $('#container').html(tmpl);
-          }
-          render();
+          
           $('pre', $view).each(function(i, e) { hljs.highlightBlock(e) })
           
           $view.on('click', '.btn-demo-panel', function(event) {
