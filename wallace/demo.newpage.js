@@ -2,6 +2,9 @@ define({
   title: 'SPA - 打开新页面视图demo',
   body: ' <ul class="img-container clearfix" id="container">\
           </ul>\
+          <div class="large animated fadeInDown" id="large_container" style="display:none">\
+            <img id="large_img">\
+          </div>\
         ' ,
         init: function(pageData) {
           var $view = this
@@ -11,7 +14,7 @@ define({
             url = url || location.href
             return url.replace(/^[^#]*#?\/?(.*)\/?$/, '$1')
           }
-          var total = 17;
+          var total = 28;
           var zWin = $(window);
           var render = function(){
             var tmpl = '';
@@ -29,7 +32,90 @@ define({
             $('#container').html(tmpl);
           }
           render();
-          
+          var cid;
+          var wImage = $('#large_img');
+          var domImage = wImage[0];
+
+          var loadImg = function(id,callback){
+            $('#container').css({height:zWin.height(),'overflow':'hidden'})
+            $('#large_container').css({
+              width:zWin.width(),
+              height:zWin.height()
+              //top:$(window).scrollTop()
+            }).show();
+            var imgsrc = 'img/'+id+'.jpg';
+            var ImageObj = new Image();
+            ImageObj.src = imgsrc;
+            ImageObj.onload = function(){
+              var w = this.width;
+              var h = this.height;
+              var winWidth = zWin.width();
+              var winHeight = zWin.height();
+                var realw = parseInt((winWidth - winHeight*w/h)/2);
+              var realh = parseInt((winHeight - winWidth*h/w)/2);
+
+              wImage.css('width','auto').css('height','auto');
+              wImage.css('padding-left','0px').css('padding-top','0px');
+              if(h/w>1.2){
+                 wImage.attr('src',imgsrc).css('height',winHeight).css('padding-left',realw+'px');;
+              }else{  
+                 wImage.attr('src',imgsrc).css('width',winWidth).css('padding-top',realh+'px');
+              }
+              
+              callback&&callback();
+            }
+
+            
+          }
+          $('#container').delegate('li','tap',function(){
+            var _id = cid = $(this).attr('data-id');
+            loadImg(_id);
+          });
+
+          $('#large_container').tap(function(){
+            $('#container').css({height:'auto','overflow':'auto'})
+            $('#large_container').hide();
+          });
+          $('#large_container').mousedown(function(e){
+            e.preventDefault();
+          });
+          var lock = false;
+          $('#large_container').swipeLeft(function(){
+            if(lock){
+              return;
+            }
+            cid++;
+            
+            lock =true;
+            loadImg(cid,function(){
+              domImage.addEventListener('webkitAnimationEnd',function(){
+                wImage.removeClass('animated bounceInRight');
+                domImage.removeEventListener('webkitAnimationEnd');
+                lock = false;
+              },false);
+              wImage.addClass('animated bounceInRight');
+            });
+          });
+
+          $('#large_container').swipeRight(function(){
+            if(lock){
+              return;
+            }
+            cid--;
+            lock =true;
+            if(cid>0){
+              loadImg(cid,function(){
+                domImage.addEventListener('webkitAnimationEnd',function(){
+                  wImage.removeClass('animated bounceInLeft');
+                  domImage.removeEventListener('webkitAnimationEnd');
+                  lock = false;
+                },false);
+                wImage.addClass('animated bounceInLeft');
+              });
+            }else{
+              cid = 1;
+            }
+          });
           $('.page-container-navbar', $view).trigger('spa:scroll')
         }
 })

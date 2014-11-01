@@ -26,7 +26,9 @@ code {
   top: 51px;
   bottom: 0;
 }
-
+.spa-page{
+  overflow: auto;
+}
 .spa-page-body {
   background: #fff;
 }
