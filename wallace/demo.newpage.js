@@ -19,7 +19,7 @@ define({
           var render = function(){
             var tmpl = '';
             var padding = 2;
-            var scrollBarWidth = 10;
+            var scrollBarWidth = 100;
             var winWidth = $(window).width();
             var picWidth = Math.floor((winWidth-padding*3-scrollBarWidth)/4);
             for(var i=1;i<=total;i++){
@@ -27,7 +27,7 @@ define({
               if(i%4==1){
                 p = 0;
               }
-              tmpl+='<li data-id="'+i+'" class="animated bounceIn" style="width:'+picWidth+'px;height:'+picWidth+'px;padding-left:'+p+'px;padding-top:'+padding+'px;"><img src="img/'+i+'.jpg"></li>';
+              tmpl+='<li data-id="'+i+'" class="animated bounceIn" style="width:25%;height:'+picWidth+'px;padding-left:'+p+'px;padding-top:'+padding+'px;"><img src="img/'+i+'.jpg"></li>';
             }
             $('#container').html(tmpl);
           }

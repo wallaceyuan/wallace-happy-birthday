@@ -55,7 +55,7 @@
         .spa-fullscreen {position: absolute; left: 0; top: 0; margin: 0; padding: 0; width: 100%; visibility: hidden; overflow: hidden; z-index: -1; }\
         .spa-page {position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: 0; padding: 0; z-index: 2000; -webkit-transform: translateZ(0); -webkit-backface-visibility: hidden; -webkit-transform-style: preserve-3d;}\
         .spa-page-bg {position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: 0; padding: 0; }\
-        .spa-page-body {position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: 0; padding: 0; overflow-y: visible; -webkit-transform: translateZ(0); -webkit-backface-visibility: hidden; -webkit-transform-style: preserve-3d;}\
+        .spa-page-body {background:#000;position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: 0; padding: 0; overflow-y: visible; -webkit-transform: translateZ(0); -webkit-backface-visibility: hidden; -webkit-transform-style: preserve-3d;}\
         .spa-scroll {overflow: auto;}\
         .spa-scroll-touch {-webkit-overflow-scrolling: touch; }\
         .spa-scroll-x {overflow-y: hidden;}\
