@@ -19,7 +19,7 @@ define({
           var render = function(){
             var tmpl = '';
             var padding = 2;
-            var scrollBarWidth = 0;
+            var scrollBarWidth = 10;
             var winWidth = $(window).width();
             var picWidth = Math.floor((winWidth-padding*3-scrollBarWidth)/4);
             for(var i=1;i<=total;i++){
