@@ -81,6 +81,8 @@ define({
           });
           var lock = false;
           $('#large_container').swipeLeft(function(){
+            e.preventDefault();
+
             if(lock){
               return;
             }
@@ -98,6 +100,8 @@ define({
           });
 
           $('#large_container').swipeRight(function(){
+            e.preventDefault();
+
             if(lock){
               return;
             }
