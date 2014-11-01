@@ -81,8 +81,6 @@ define({
           });
           var lock = false;
           $('#large_container').swipeLeft(function(){
-            e.preventDefault();
-
             if(lock){
               return;
             }
@@ -97,11 +95,11 @@ define({
               },false);
               wImage.addClass('animated bounceInRight');
             });
+            e.preventDefault();
+
           });
 
           $('#large_container').swipeRight(function(){
-            e.preventDefault();
-
             if(lock){
               return;
             }
@@ -119,6 +117,8 @@ define({
             }else{
               cid = 1;
             }
+            e.preventDefault();
+
           });
           $('.page-container-navbar', $view).trigger('spa:scroll')
         }
