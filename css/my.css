@@ -5,9 +5,11 @@ padding: 0;
 body{background:black;overflow:hidden}
 ul{list-style:none}
 .clearfix:after{display: block; content: "\20"; height: 0; clear: both; overflow: hidden; visibility: hidden;}/*ie8ÒÔÉÏ*/
+#main{
+	position: relative;
+}
+.pin{padding: 5px 0 0 5px;float:left;}
+.img-container .box {float:left;padding-left: 0px;border:1px solid #ccc;box-shadow: 0 0 6px #ccc;border-radius: 5px;}
+.img-container .box img{ width: auto;height:100%;}
 
-.img-container li img{width: 100%;}
-.img-container li {overflow:hidden;float:left;}
 .large{width:100%;height:100%;position:absolute;top:0px;left:0px;background-color:black}
-.spa-page-demo-newpage .spa-page-body {background: #000;}
-.spa-page-demo-newpage .spa-page-body ul{background: #000;}
