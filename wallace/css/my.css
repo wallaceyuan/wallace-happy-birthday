@@ -9,4 +9,5 @@ ul{list-style:none}
 .img-container li img{width: 100%;}
 .img-container li {overflow:hidden;float:left;}
 .large{width:100%;height:100%;position:absolute;top:0px;left:0px;background-color:black}
-.spa-page-demo-newpage ul{background: #000;}
+.spa-page-demo-newpage .spa-page-body {background: #000;}
+.spa-page-demo-newpage .spa-page-body ul{background: #000;}
