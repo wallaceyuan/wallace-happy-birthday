@@ -114,7 +114,6 @@ function workPage(u){
 			var num = Math.floor( $( window ).width() / iPinW );//每行中能容纳的pin个数【窗口宽度除以一个块框宽度】
 			//oParent.style.cssText='width:'+iPinW*num+'px;ma rgin:0 auto;';//设置父级居中样式：定宽+自动水平外边距
 			var iW = iPinW * 4 + 2+'px';
-			console.log(iPinW,iW);
 			$( "#container" ).css({
 				'width':iW,
 				'margin': '0 auto'
@@ -146,14 +145,18 @@ function workPage(u){
 		var domImage = wImage[0];
 
 		var loadImg = function(id,callback){
-		  $('#container').css({height:zWin.height(),'overflow':'hidden'})
+		  $('#container').css({height:zWin.height(),'overflow':'hidden'});
+		  var sHeight= Math.max(document.documentElement.scrollHeight,document.body.scrollHeight);
+		  var bHeight = document.documentElement.clientHeight || document.body.clientHeight;
+		  var sTop = document.documentElement.scrollTop || document.body.scrollTop
+
+		  console.log(sHeight);
 		  $('#large_container').css({
 			width:zWin.width(),
-			height:zWin.height()
+			height:sHeight + bHeight
 			//top:$(window).scrollTop()
 		  }).show();
 		  var imgsrc = 'images/'+id+'.jpg';
-		  console.log(imgsrc);
 		  var ImageObj = new Image();
 		  ImageObj.src = imgsrc;
 		  ImageObj.onload = function(){
@@ -163,25 +166,30 @@ function workPage(u){
 			var winHeight = zWin.height();
 			var realw = parseInt((winWidth - winHeight*w/h)/2);
 			var realh = parseInt((winHeight - winWidth*h/w)/2);
+			var topoffset = $('.box').eq(id-1).offset().top;
+			console.log(topoffset,$('.box').eq(id));
 
 			wImage.css('width','auto').css('height','auto');
 			wImage.css('padding-left','0px').css('padding-top','0px');
 			if(h/w>1.2){
 			   wImage.attr('src',imgsrc).css('height',winHeight).css('padding-left',realw+'px');;
 			}else{  
-			   wImage.attr('src',imgsrc).css('width',winWidth).css('padding-top',realh+'px');
+			   wImage.attr('src',imgsrc).css('width',winWidth).css('padding-top',topoffset+'px');
 			}
-			
+			$(document).on( 'scroll', function(){
+			    console.log('Event Fired');
+			});
 			callback&&callback();
 		  }
 		}
 		$('#container').delegate('.box','tap',function(){
 		  var _id = cid = $(this).attr('data-id');
-		  loadImg(_id);
+/*		  var topoffset = $(this).offset().top;
+*/		  loadImg(_id);
 		});
 
 		$('#large_container').tap(function(){
-		  $('#container').css({height:'auto','overflow':'auto'})
+		  $('#container').css({height:'auto','overflow':'auto'});
 		  $('#large_container').hide();
 		});
 		$('#large_container').mousedown(function(e){
