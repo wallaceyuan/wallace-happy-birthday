@@ -119,7 +119,7 @@ define({
 				});
 
 				$('#large_container').tap(function(){
-					$('#container').css({height:'auto','overflow':'auto'});
+					$('#container').css({height:'auto','overflow':'visible'});
 					$('#large_container').hide();
 				});
 				$('#large_container').mousedown(function(e){

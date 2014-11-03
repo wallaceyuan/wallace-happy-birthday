@@ -15,4 +15,4 @@ ul{list-style:none}
 .img-container .box {float:left;padding-left: 0px;border:1px solid #ccc;box-shadow: 0 0 6px #ccc;border-radius: 5px;}
 .img-container .box img{ width: auto;}
 
-.large{width:100%;height:100%;position:absolute;top:0px;left:0px;background-color:black}
+.large{width:100%;height:100%;position:absolute;top:0px;left:0px;background-color:black;z-index: 3000;}
