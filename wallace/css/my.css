@@ -8,6 +8,9 @@ ul{list-style:none}
 #main{
 	position: relative;
 }
+#container{
+	position: relative;
+}
 .pin{padding: 5px 0 0 5px;float:left;}
 .img-container .box {float:left;padding-left: 0px;border:1px solid #ccc;box-shadow: 0 0 6px #ccc;border-radius: 5px;}
 .img-container .box img{ width: auto;}
