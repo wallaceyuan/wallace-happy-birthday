@@ -1,5 +1,5 @@
 define({
-	title: 'SPA - 打开新页面视图demo',
+	title: 'Wallace Pic',
 	body: '<nav class="navbar navbar-default navbar-static-top" role="navigation">\
 				<div class="navbar-header">\
 					<a class="navbar-brand" href="#demo/newpage">新页面</a>\
@@ -9,7 +9,10 @@ define({
 			<div class="page-container-navbar">\
 				<div class="container">\
 					<ul class="img-container clearfix" id="container">\
-							</ul>\
+					</ul>\
+				</div>\
+				<div class="large animated fadeInDown" id="large_container" style="display:none">\
+					<img id="large_img">\
 				</div>\
 			</div>\
 			',
@@ -61,10 +64,8 @@ define({
 						var pinH = $aPin.eq(index).height();
 						if( index < num ){
 							pinHArr[ index ] = pinH; //第一行中的num个块框pin 先添加进数组pinHArr
-							console.log(pinH);
 						}else{
 							var minH = Math.min.apply( null, pinHArr );//数组pinHArr中的最小值minH
-							console.log(minH);
 							var minHIndex = $.inArray( minH, pinHArr );
 							$( value ).css({
 								'position': 'absolute',
@@ -76,7 +77,6 @@ define({
 						
 						}
 					});
-					console.log(pinHArr);
 				}
 				var cid;
 				var wImage = $('#large_img');
@@ -112,7 +112,6 @@ define({
 						callback&&callback();
 					}
 				}
-				$('#')
 				$('#container').delegate('.box','tap',function(){
 					var _id = cid = $(this).attr('data-id');
 					console.log(cid);
