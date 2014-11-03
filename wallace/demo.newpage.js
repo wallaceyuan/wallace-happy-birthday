@@ -25,8 +25,53 @@ define({
 				}
 				var total = 17;
 				var zWin = $(window);
+				function addLoadEvent(func) { //define a new function called addLoadEvent which takes in one param which should be function
+					var oldonload = window.onload; //assign window.onload event to variable oldonload
+						if (typeof window.onload != 'function') { //if window.onload is not a function,  and thus has never been defined before elsewhere
+							window.onload = func; //assign 'func' to window.onload event. set the function you passed in as the onload function
+						} else {             //if window.onlad is a function - thus already defined, we dont want to overwrite it so we will..
+							window.onload = function() {  //define a new onload function that does the following:
+							oldonload();  //do whatever the old onload function did
+							func();       //and then do whatever your new passed in function does
+						}
+					}
+				}
+				$('.page-container-navbar').on('scroll',function(){
+					var dataInt={'data':[{'src':'1.jpg'},{'src':'2.jpg'},{'src':'3.jpg'},{'src':'4.jpg'}]};
+					if(checkscrollside()){
+						alert(1);
+						$.each( dataInt.data, function( index, value ){
+							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
+							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
+							$('<img>').attr('src','./images/' + $( value).attr( 'src') ).appendTo($oBox);
+						});
+						waterfall();
+					};
+				});
+/*				$(window).scroll=function(){
+					alert(1);
+					if(checkscrollside()){
+						$.each( dataInt.data, function( index, value ){
+							var $oPin = $('<div>').addClass('pin').appendTo( $( "#main" ) );
+							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
+							$('<img>').attr('src','./images/' + $( value).attr( 'src') ).appendTo($oBox);
+						});
+						waterfall();
+					};
+				}*/
+				function checkscrollside(){
+					var $aPin = $(".pin");
+					var lastPinH = $aPin.last().get(0).offsetTop + Math.floor($aPin.last().height()/2);//创建【触发添加块框函数waterfall()】的高度：最后一个块框的距离网页顶部+自身高的一半(实现未滚到底就开始加载)
+					var scrollTop = $('.page-container-navbar').scrollTop();//注意解决兼容性
+					var documentH = $(document).width();//页面高度
+					console.log(lastPinH,scrollTop,documentH);
+					console.log($aPin.eq(0));
+					return (lastPinH < scrollTop + documentH ) ? true : false;//到达指定高度后 返回true，触发waterfall()函数
+				}
 
 				render();
+
+				/*图片加载*/
 				function render(){
 					var total = 28;
 					var tmpl = '';
@@ -44,10 +89,10 @@ define({
 					}
 					$('#container').html(tmpl);
 					setTimeout(function () {
-						waterfall();
+						waterfall()
 					}, 400);
 				}
-
+				/*瀑布流*/
 				function waterfall(parent,pin){
 					var $aPin = $( ".pin" );
 					var iPinW = $aPin.eq( 0 ).width();// 一个块框pin的宽
@@ -81,10 +126,9 @@ define({
 				var cid;
 				var wImage = $('#large_img');
 				var domImage = wImage[0];
-
+				/*加载图片*/
 				var loadImg = function(id,callback){
 					$('#container').css({height:zWin.height(),'overflow':'hidden'});
-
 					$('#large_container').css({
 						width:zWin.width(),
 						height:zWin.height()
@@ -98,7 +142,7 @@ define({
 						var h = this.height;
 						var winWidth = zWin.width();
 						var winHeight = zWin.height();
-					    var realw = parseInt((winWidth - winHeight*w/h)/2);
+						var realw = parseInt((winWidth - winHeight*w/h)/2);
 						var realh = parseInt((winHeight - winWidth*h/w)/2);
 
 						wImage.css('width','auto').css('height','auto');
@@ -112,12 +156,13 @@ define({
 						callback&&callback();
 					}
 				}
+				/*点击图片*/
 				$('#container').delegate('.box','tap',function(){
 					var _id = cid = $(this).attr('data-id');
 					console.log(cid);
 					loadImg(_id);
 				});
-
+				/*点击返回*/
 				$('#large_container').tap(function(){
 					$('#container').css({height:'auto','overflow':'visible'});
 					$('#large_container').hide();
@@ -126,6 +171,7 @@ define({
 					e.preventDefault();
 				});
 				var lock = false;
+				/*左滑动*/
 				$('#large_container').swipeLeft(function(e){
 					if(lock){
 					return;
@@ -143,6 +189,7 @@ define({
 					});
 					e.preventDefault();
 				});
+				/*右滑动*/
 				$('#large_container').swipeRight(function(e){
 					if(lock){
 					return;
@@ -163,7 +210,6 @@ define({
 					}
 					e.preventDefault();
 				});
-				
 				$('.page-container-navbar', $view).trigger('spa:scroll')
 			}
 })
