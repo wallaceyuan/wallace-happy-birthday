@@ -1,0 +1,15 @@
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul,img{
+margin: 0;
+padding: 0;
+}
+body{background:black;overflow:hidden}
+ul{list-style:none}
+.clearfix:after{display: block; content: "\20"; height: 0; clear: both; overflow: hidden; visibility: hidden;}/*ie8ÒÔÉÏ*/
+#main{
+	position: relative;
+}
+.pin{padding: 5px 0 0 5px;float:left;}
+.img-container .box {float:left;padding-left: 0px;border:1px solid #ccc;box-shadow: 0 0 6px #ccc;border-radius: 5px;}
+.img-container .box img{ width: auto;}
+
+.large{width:100%;height:100%;position:absolute;top:0px;left:0px;background-color:black}
