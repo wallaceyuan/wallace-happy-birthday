@@ -11,9 +11,9 @@ define({
 					<ul class="img-container clearfix" id="container">\
 					</ul>\
 				</div>\
-				<div class="large animated fadeInDown" id="large_container" style="display:none">\
-					<img id="large_img">\
-				</div>\
+			</div>\
+			<div class="large animated fadeInDown" id="large_container" style="display:none">\
+				<img id="large_img">\
 			</div>\
 			',
 			init: function(pageData) {
