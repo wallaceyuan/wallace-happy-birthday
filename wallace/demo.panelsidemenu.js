@@ -2,9 +2,6 @@ define({
   body: '<div class="container">\
     <div class="panel panel-default">\
       <div id="wrapper">\
-      <div class="panel-body">\
-        菜单可以上下滚动，点击右侧空白区域可以自动收起\
-      </div>\
       <audio preload></audio>\
       <ul class="list-group">\
         <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/故乡香.mp3">故乡香</a></li>\
