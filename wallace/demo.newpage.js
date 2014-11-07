@@ -238,7 +238,7 @@ define({
 					}
 					setTimeout(function () {
 						waterfall()
-					}, 400);
+					}, 1000);
 				}
 				/*瀑布流*/
 				function waterfall(parent,pin){
