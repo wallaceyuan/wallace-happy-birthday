@@ -8,11 +8,11 @@ define({
          <div class="page-container-navbar">\
            <div class="container">\
              <div class="page-header"></div>\
-             <p><a href="#demo/newpage" class="btn btn-sm btn-info">图片</a></p>\
-             <p><a href="#demo/newpageright" class="btn btn-sm btn-info">打开新右页面视图</a></p>\
-             <p><a href="#" data-panel="demoPanelSidemenu" class="btn btn-sm btn-info btn-demo-panel">音乐</a>\
-                <a href="#" data-panel="demoPanelAlert" class="btn btn-sm btn-info btn-demo-panel">提示对话框</a>\
-                <a href="#" data-panel="demoPanelConfirm" class="btn btn-sm btn-info btn-demo-panel">确认对话框</a>\
+             <p><a href="#demo/newpage" class="btn main_btn btn-info">图片</a></p>\
+             <p><a href="#demo/newpageright" class="btn main_btn btn-info">百科</a></p>\
+             <p><a href="#" data-panel="demoPanelSidemenu" class="btn main_btn btn-info btn-demo-panel">音乐</a>\
+                <a href="#" data-panel="demoPanelAlert" class="btn main_btn btn-info btn-demo-panel">提示对话框</a>\
+                <a href="#" data-panel="demoPanelConfirm" class="btn main_btn btn-info btn-demo-panel">确认对话框</a>\
              </p>\
            </div>\
          </div>\
