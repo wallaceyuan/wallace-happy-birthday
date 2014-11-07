@@ -228,12 +228,11 @@ define({
 						var imgsrc = 'images/'+i+'.jpg';
 						var ImageObj = new Image();
 						ImageObj.src = imgsrc;
-/*						ImageObj.onload = function (){
-							alert("complete : "+ImageObj.complete +"\nreadyState : "+ImageObj.readyState)
+						ImageObj.onload = function (){
 							if(ImageObj.complete){
-								console.log("cs")
+								waterfall();
 							}
-						}*/
+						}
 						$('.pin').eq(i-1).find('img').css('width',zWP);
 						$('.pin').eq(i-1).find('img').attr('src',imgsrc);
 					}
