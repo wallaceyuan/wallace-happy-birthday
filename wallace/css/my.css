@@ -30,8 +30,8 @@ h1 { color: #444; font-size: 1.2em; padding: 14px 2px 12px; margin: 0px; }
 h1 em { font-style: normal; color: #999; }
 a { color: #888; text-decoration: none; }
 #wrapper { width: 200px;}
-
-ul { padding: 0px; margin: 0px; list-style: decimal-leading-zero inside; color: #ccc; width: 200px; border-top: 1px solid #ccc; font-size: 0.9em; }
+.audiojs{margin: 100px 0px 0px 0px;}
+ul {padding: 0px; margin: 0px; list-style: decimal-leading-zero inside; color: #ccc; width: 200px; border-top: 1px solid #ccc; font-size: 0.9em; }
 ul li {
 	padding-left: 10px;
 	position: relative;
