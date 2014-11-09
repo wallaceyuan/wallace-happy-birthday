@@ -15,7 +15,7 @@ var pageHome = {
   animate: 'fadeIn',
   view: function() {
     var $page = this
-    requirejs(['demo.home'], function(viewData) {
+    requirejs(['demo.index'], function(viewData) {
       $doc.trigger('spa:initpage', [$page, viewData])
     })
   }
@@ -29,7 +29,6 @@ var demoNewPage = {
   view: function() {
     var $page = this
     requirejs(['demo.newpage'], function(viewData) {
-      console.log(viewData);
       $doc.trigger('spa:initpage', [$page, viewData])
     })
   }

@@ -19,7 +19,7 @@ define({
         ',
         init: function(pageData) {
           var $view = this
-
+          
           // 获取hash
           function getHash(url) {
             url = url || location.href
@@ -27,6 +27,10 @@ define({
           }
           
           $('pre', $view).each(function(i, e) { hljs.highlightBlock(e) })
+          
+          
+
+
           
           $view.on('click', '.btn-demo-panel', function(event) {
             event.preventDefault()
