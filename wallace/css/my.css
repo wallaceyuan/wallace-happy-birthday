@@ -33,7 +33,7 @@ ul{list-style:none}
 .left_img{position:relative;float:right;width:50%;height:100%;background:#fff;}
 .left_img i{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
 .left_img i img{display:block;width:109%;vertical-align:middle;}
-.swiper-slide-active .move-down{-webkit-animation-name:down;animation-name:down;}
+.swiper-slide-active .move-down{-webkit-animation-name:down;animation-name:down;-webkit-backface-visibility: hidden;}
 @-webkit-keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);}
 100%{-webkit-transform:none;transform:none;}
 }
@@ -43,7 +43,7 @@ ul{list-style:none}
 .right_img{position:absolute;top:0;left:0;width:50%;height:100%;background:#fff;}
 .right_img i{display:block;width:100%;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
 .right_img i img{display:block;width:100%;vertical-align:middle;}
-.swiper-slide-active .move-up{-webkit-animation-name:up;animation-name:up;}
+.swiper-slide-active .move-up{-webkit-animation-name:up;animation-name:up;-webkit-backface-visibility: hidden;}
 @-webkit-keyframes up{0%{-webkit-transform:translate3d(0,200px,0);transform:translate3d(0,200px,0);}
 100%{-webkit-transform:none;transform:none;}
 }
