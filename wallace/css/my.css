@@ -18,7 +18,7 @@ ul{list-style:none}
 #slide_three p{position:absolute;bottom:10%;right:20%;font:1.5em/1 "微软雅黑";color:#fff}
 
 /* 第二页*/
-#slideone{background:#f3efe8}
+#slideone{background:url(../images/index2_back.jpg) center top no-repeat;}
 .left_img{top:10%;height:100%;float:right;display:inline-block;position:relative}
 .left_img i{display:block}
 .left_img i img{width:100%;display:block;vertical-align:middle}
