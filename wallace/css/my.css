@@ -26,25 +26,30 @@ ul{list-style:none}
 /* 第二页  气球 */
 #slideone{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
 
-
 /* 第三页 祝福*/
-/* 祝福 */
-#slidetwo{background:#343320;}
+#slidetwo{background:#fff;}
 #slidetwo .container{position:relative;}
-.left_img{position:relative;top:10%;height:100%;}
+.right_inf{position:absolute;top:30%;color:#000;font:1.2em/1.5 "黑体";width: 100%;text-align: center;}
+.left_img{position:relative;float:right;width:50%;height:100%;background:#fff;}
 .left_img i{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
-.left_img i img{display:block;width:100%;vertical-align:middle;}
-.right_inf{position:absolute;top:15%;left:10%;color:#cecece;font:1.2em/2.5 "黑体";}
-.right_inf #slogan_1{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.left_img i img{display:block;width:109%;vertical-align:middle;}
 .swiper-slide-active .move-down{-webkit-animation-name:down;animation-name:down;}
-.swiper-slide-active .move-up{-webkit-animation-name:up;animation-name:up;}
-@-webkit-keyframes up{0%{-webkit-transform:translate3d(0,300px,0);transform:translate3d(0,300px,0);}
+@-webkit-keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);}
 100%{-webkit-transform:none;transform:none;}
 }
-@keyframes up{0%{-webkit-transform:translate3d(0,300px,0);transform:translate3d(0,300px,0);-ms-transform:translate3d(0,300px,0);}
+@keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);-ms-transform:translate3d(0,-500px,0);}
 100%{-webkit-transform:none;transform:none;-ms-transform:none;}
 }
-
+.right_img{position:absolute;top:0;left:0;width:50%;height:100%;background:#fff;}
+.right_img i{display:block;width:100%;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.right_img i img{display:block;width:100%;vertical-align:middle;}
+.swiper-slide-active .move-up{-webkit-animation-name:up;animation-name:up;}
+@-webkit-keyframes up{0%{-webkit-transform:translate3d(0,200px,0);transform:translate3d(0,200px,0);}
+100%{-webkit-transform:none;transform:none;}
+}
+@keyframes up{0%{-webkit-transform:translate3d(0,200px,0);transform:translate3d(0,200px,0);-ms-transform:translate3d(0,200px,0);}
+100%{-webkit-transform:none;transform:none;-ms-transform:none;}
+}
 
 
 
