@@ -18,7 +18,7 @@ ul{list-style:none}
 #slide_three p{position:absolute;bottom:10%;right:20%;font:1.5em/1 "微软雅黑";color:#fff}
 
 /* 第二页*/
-#slideone{background:url(../images/index2_back.jpg) center top no-repeat;}
+#slideone{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
 .left_img{top:10%;height:100%;float:right;display:inline-block;position:relative}
 .left_img i{display:block}
 .left_img i img{width:100%;display:block;vertical-align:middle}
@@ -62,15 +62,15 @@ li.playing:before{position:absolute;top:9px;left:-24px;margin:0;padding:3px;widt
 .balloon>div{position:absolute;margin:0 auto;padding:10px;width:104px;height:140px;border-radius:0;border-radius:80% 80% 80% 80%;background:rgba(182,15,97,0.9);box-shadow:inset 17px 7px 10px rgba(182,15,97,0.9);-webkit-transform-origin:bottom center;}
 .balloon>div:nth-child(1){left:0;background:rgba(182,15,97,0.9);box-shadow:inset 10px 10px 10px rgba(135,11,72,0.9);-webkit-animation:balloon1 6s ease-in-out infinite;-moz-animation:balloon1 6s ease-in-out infinite;-o-animation:balloon1 6s ease-in-out infinite;animation:balloon1 6s ease-in-out infinite;}
 .balloon>div:nth-child(1):before{color:rgba(182,15,97,0.9);}
-.balloon>div:nth-child(2){left:120px;background:rgba(242,112,45,0.9);box-shadow:inset 10px 10px 10px rgba(222,85,14,0.9);-webkit-animation:balloon2 6s ease-in-out infinite;-moz-animation:balloon2 6s ease-in-out infinite;-o-animation:balloon2 6s ease-in-out infinite;animation:balloon2 6s ease-in-out infinite;}
+.balloon>div:nth-child(2){left:100px;background:rgba(242,112,45,0.9);box-shadow:inset 10px 10px 10px rgba(222,85,14,0.9);-webkit-animation:balloon2 6s ease-in-out infinite;-moz-animation:balloon2 6s ease-in-out infinite;-o-animation:balloon2 6s ease-in-out infinite;animation:balloon2 6s ease-in-out infinite;}
 .balloon>div:nth-child(2):before{color:rgba(242,112,45,0.9);}
-.balloon>div:nth-child(3){left:240px;background:rgba(45,181,167,0.9);box-shadow:inset 10px 10px 10px rgba(35,140,129,0.9);-webkit-animation:balloon4 6s ease-in-out infinite;-moz-animation:balloon4 6s ease-in-out infinite;-o-animation:balloon4 6s ease-in-out infinite;animation:balloon4 6s ease-in-out infinite;}
+.balloon>div:nth-child(3){left:210px;background:rgba(45,181,167,0.9);box-shadow:inset 10px 10px 10px rgba(35,140,129,0.9);-webkit-animation:balloon4 6s ease-in-out infinite;-moz-animation:balloon4 6s ease-in-out infinite;-o-animation:balloon4 6s ease-in-out infinite;animation:balloon4 6s ease-in-out infinite;}
 .balloon>div:nth-child(3):before{color:rgba(45,181,167,0.9);}
-.balloon>div:nth-child(4){left:360px;background:rgba(190,61,244,0.9);box-shadow:inset 10px 10px 10px rgba(173,14,240,0.9);-webkit-animation:balloon1 5s ease-in-out infinite;-moz-animation:balloon1 5s ease-in-out infinite;-o-animation:balloon1 5s ease-in-out infinite;animation:balloon1 5s ease-in-out infinite;}
+.balloon>div:nth-child(4){left:330px;background:rgba(190,61,244,0.9);box-shadow:inset 10px 10px 10px rgba(173,14,240,0.9);-webkit-animation:balloon1 5s ease-in-out infinite;-moz-animation:balloon1 5s ease-in-out infinite;-o-animation:balloon1 5s ease-in-out infinite;animation:balloon1 5s ease-in-out infinite;}
 .balloon>div:nth-child(4):before{color:rgba(190,61,244,0.9);}
-.balloon>div:nth-child(5){left:480px;background:rgba(180,224,67,0.9);box-shadow:inset 10px 10px 10px rgba(158,206,34,0.9);-webkit-animation:balloon3 5s ease-in-out infinite;-moz-animation:balloon3 5s ease-in-out infinite;-o-animation:balloon3 5s ease-in-out infinite;animation:balloon3 5s ease-in-out infinite;}
+.balloon>div:nth-child(5){left:450px;background:rgba(180,224,67,0.9);box-shadow:inset 10px 10px 10px rgba(158,206,34,0.9);-webkit-animation:balloon3 5s ease-in-out infinite;-moz-animation:balloon3 5s ease-in-out infinite;-o-animation:balloon3 5s ease-in-out infinite;animation:balloon3 5s ease-in-out infinite;}
 .balloon>div:nth-child(5):before{color:rgba(180,224,67,0.9);}
-.balloon>div:nth-child(6){left:600px;background:rgba(242,194,58,0.9);box-shadow:inset 10px 10px 10px rgba(234,177,15,0.9);-webkit-animation:balloon2 3s ease-in-out infinite;-moz-animation:balloon2 3s ease-in-out infinite;-o-animation:balloon2 3s ease-in-out infinite;animation:balloon2 3s ease-in-out infinite;}
+.balloon>div:nth-child(6){left:570px;background:rgba(242,194,58,0.9);box-shadow:inset 10px 10px 10px rgba(234,177,15,0.9);-webkit-animation:balloon2 3s ease-in-out infinite;-moz-animation:balloon2 3s ease-in-out infinite;-o-animation:balloon2 3s ease-in-out infinite;animation:balloon2 3s ease-in-out infinite;}
 .balloon>div:nth-child(6):before{color:rgba(242,194,58,0.9);}
 .balloon>div:before{position:absolute;bottom:-11px;left:52px;color:rgba(182,15,97,0.9);content:"▲";font-size:1em;}
 .balloon span{position:relative;top:30px;left:50%;margin-left:-27px;color:white;font-size:4.8em;}
