@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=320.1, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<title>无标题文档</title>
+</head>
+<script type="text/javascript" src="../assets/js/idangerous.swiper-2.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/zepto.min.js"></script>
+<style type="text/css">
+body{
+	font:16px/1.5 微软雅黑;
+}
+#slide_three{
+	background: #09090A;
+}
+#slide_three .container{
+	width: 90%;
+	margin: 0 auto;
+}
+.indexw{
+	position: relative;
+}
+#indexo{
+	width: 40%;
+	position: absolute;
+	top: 32%;
+	left: 22%;
+}
+#indext{
+	width: 30%;
+	position: absolute;
+	top: 20%;
+	right: 21%;
+}
+.indeximg i{
+	width: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.indeximg i img{
+	width: 100%;
+	display: block;
+	vertical-align: middle;
+	border-radius: 50%;
+	border: 1px solid #393A18;
+}
+#slide_three p{
+	position: absolute;
+	bottom: 10%;
+	right: 20%;
+	font: 1.5em/1 "微软雅黑";
+	color: #fff;
+}
+</style>
+<body>
+<div class="swiper-wrapper">
+	<div class="swiper-slide" id="slide_three">
+		<div class="container">
+			<div class="indeximg" id="indexo">
+				<i>
+					<img src="images/index1.jpg">
+				</i>
+			</div>
+			<div class="indeximg" id="indext">
+				<i>
+					<img src="images/index2.jpg">
+				</i>
+			</div>
+			<p class="name">钟汉良</p>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	
+	var $window = $(window);
+
+	var winHeight =$window.height();
+	
+	$(".swiper-slide").css("height",winHeight);
+	$(".container").css("height",winHeight);
+	
+	
+</script>
+</html>
