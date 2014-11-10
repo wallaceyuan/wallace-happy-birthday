@@ -2,7 +2,6 @@ define({
   body: '<div class="container">\
     <div class="panel panel-default">\
       <div id="wrapper">\
-      <audio preload></audio>\
       <ul class="list-group">\
         <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/故乡香.mp3">故乡香</a></li>\
         <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/救我.mp3">救我</a></li>\
@@ -16,6 +15,7 @@ define({
         <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/10-the-curious-incident-of-big-poppa-in-the-nighttime.mp3">the curious incident of big poppa in the nighttime</a></li>\
         <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/11-mo-stars-mo-problems.mp3">mo stars mo problems</a></li>\
       </ul>\
+      <audio preload></audio>\
     </div>\
   </div>\
   ',

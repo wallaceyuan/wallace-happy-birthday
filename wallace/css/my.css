@@ -69,7 +69,7 @@ h1{margin:0;padding:14px 2px 12px;color:#444;font-size:1.2em;}
 h1 em{color:#999;font-style:normal;}
 a{color:#888;text-decoration:none;}
 #wrapper{width:200px;}
-.audiojs{margin:100px 0 0 0;}
+.audiojs{position: fixed;bottom: 0px;left: 0px;}
 ul{margin:0;padding:0;width:200px;border-top:1px solid #ccc;color:#ccc;list-style:decimal-leading-zero inside;font-size:.9em;}
 ul li{position:relative;margin:0;margin-left:10px;padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #ccc;cursor:pointer;}
 ul li a{display:inline-block;padding:0 0 0 20px;text-indent:-3.3ex;}

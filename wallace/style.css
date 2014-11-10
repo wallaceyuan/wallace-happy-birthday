@@ -32,6 +32,7 @@ code {
 }
 
 #spa-panel-demoPanelSidemenu .container {
+  background: #fff;
   position: absolute;
   left: 0;
   right: 0;
