@@ -29,7 +29,7 @@ ul{list-style:none}
 
 /* 第三页 祝福*/
 /* 祝福 */
-#slidetwo{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
+#slidetwo{background:#343320;}
 #slidetwo .container{position:relative;}
 .left_img{position:relative;top:10%;height:100%;}
 .left_img i{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
