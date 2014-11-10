@@ -38,12 +38,6 @@ ul{list-style:none}
 .right_inf #slogan_1{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
 .swiper-slide-active .move-down{-webkit-animation-name:down;animation-name:down;}
 .swiper-slide-active .move-up{-webkit-animation-name:up;animation-name:up;}
-@-webkit-keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);}
-100%{-webkit-transform:none;transform:none;}
-}
-@keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);-ms-transform:translate3d(0,-500px,0);}
-100%{-webkit-transform:none;transform:none;-ms-transform:none;}
-}
 @-webkit-keyframes up{0%{-webkit-transform:translate3d(0,300px,0);transform:translate3d(0,300px,0);}
 100%{-webkit-transform:none;transform:none;}
 }
