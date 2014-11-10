@@ -15,6 +15,7 @@ body{
 	background: #09090A;
 }
 #slide_three .container{
+	position: relative;
 	width: 90%;
 	margin: 0 auto;
 }
@@ -52,34 +53,85 @@ body{
 	font: 1.5em/1 "微软雅黑";
 	color: #fff;
 }
+
+/* 气球 */
+#slideone{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
+/* 祝福 */
+#slidetwo{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
+#slidetwo .container{position:relative;}
+.left_img{position:relative;top:10%;height:100%;}
+.left_img i{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.left_img i img{display:block;width:100%;vertical-align:middle;}
+.right_inf{position:absolute;top:15%;left:10%;color:#cecece;font:1.2em/1.5 "黑体";}
+.right_inf #slogan_1{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.swiper-slide-active .move-down{-webkit-animation-name:down;animation-name:down;}
+.swiper-slide-active .move-up{-webkit-animation-name:up;animation-name:up;}
+@-webkit-keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);}
+100%{-webkit-transform:none;transform:none;}
+}
+@keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);-ms-transform:translate3d(0,-500px,0);}
+100%{-webkit-transform:none;transform:none;-ms-transform:none;}
+}
+@-webkit-keyframes up{0%{-webkit-transform:translate3d(0,200px,0);transform:translate3d(0,200px,0);}
+100%{-webkit-transform:none;transform:none;}
+}
+@keyframes up{0%{-webkit-transform:translate3d(0,200px,0);transform:translate3d(0,200px,0);-ms-transform:translate3d(0,200px,0);}
+100%{-webkit-transform:none;transform:none;-ms-transform:none;}
+}
+
 </style>
 <body>
-<div class="swiper-wrapper">
-	<div class="swiper-slide" id="slide_three">
-		<div class="container">
-			<div class="indeximg" id="indexo">
-				<i>
-					<img src="images/index1.jpg">
-				</i>
+	<div class="swiper-container" id="slider1">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" id="slide_three">
+				<div class="container">
+					<div class="indeximg" id="indexo">
+						<i>
+							<img src="images/index1.jpg">
+						</i>
+					</div>
+					<div class="indeximg" id="indext">
+						<i>
+							<img src="images/index2.jpg">
+						</i>
+					</div>
+					<p class="name">钟汉良</p>
+				</div>
 			</div>
-			<div class="indeximg" id="indext">
-				<i>
-					<img src="images/index2.jpg">
-				</i>
+			<div class="swiper-slide" id="slidetwo">
+				<div class="container">
+					<div class="left_img">
+						<i class="move-down"><img src="images/bg.png"></i>
+					</div>
+					<div class="right_inf">
+						<div id="slogan_1" class="move-up">
+							<p>淡定 从容</p>
+							<p>优雅的小太阳</p>
+							<p>愿你的每一天</p>
+							<p>都是风和日丽</p>
+							<p>生日快乐</p>
+						</div>
+					</div>
+				</div>
 			</div>
-			<p class="name">钟汉良</p>
 		</div>
 	</div>
-</div>
 </body>
 <script type="text/javascript">
 	
 	var $window = $(window);
 
 	var winHeight =$window.height();
-	
 	$(".swiper-slide").css("height",winHeight);
 	$(".container").css("height",winHeight);
+
+	var swiperNested1 = new Swiper("#slider1",{
+
+		mode:"vertical",
+
+		mousewheelControl:true
+
+	});
 	
 	
 </script>

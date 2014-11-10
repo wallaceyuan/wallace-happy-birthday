@@ -6,6 +6,12 @@ ul{list-style:none}
 #main{position:relative}
 #container{position:relative}
 .main_btn{width:45%;margin-bottom:10px;margin-right:5%;float:left}
+/* 初始spa css */
+.spa-page-body{
+	background: #000;
+}
+
+
 
 /* 首页 */
 #slide_three{background:#09090a}
@@ -17,13 +23,37 @@ ul{list-style:none}
 .indeximg i img{width:100%;display:block;vertical-align:middle;border-radius:50%;border:1px solid #393a18}
 #slide_three p{position:absolute;bottom:10%;right:20%;font:1.5em/1 "微软雅黑";color:#fff}
 
-/* 第二页*/
+/* 第二页  气球 */
 #slideone{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
-.left_img{top:10%;height:100%;float:right;display:inline-block;position:relative}
-.left_img i{display:block}
-.left_img i img{width:100%;display:block;vertical-align:middle}
-#slidetwo{background:#f3efe8}
-.right_inf{float:left;display:inline-block;text-align:left}
+
+
+/* 第三页 祝福*/
+/* 祝福 */
+#slidetwo{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
+#slidetwo .container{position:relative;}
+.left_img{position:relative;top:10%;height:100%;}
+.left_img i{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.left_img i img{display:block;width:100%;vertical-align:middle;}
+.right_inf{position:absolute;top:15%;left:10%;color:#cecece;font:1.2em/2.5 "黑体";}
+.right_inf #slogan_1{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.swiper-slide-active .move-down{-webkit-animation-name:down;animation-name:down;}
+.swiper-slide-active .move-up{-webkit-animation-name:up;animation-name:up;}
+@-webkit-keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);}
+100%{-webkit-transform:none;transform:none;}
+}
+@keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);-ms-transform:translate3d(0,-500px,0);}
+100%{-webkit-transform:none;transform:none;-ms-transform:none;}
+}
+@-webkit-keyframes up{0%{-webkit-transform:translate3d(0,300px,0);transform:translate3d(0,300px,0);}
+100%{-webkit-transform:none;transform:none;}
+}
+@keyframes up{0%{-webkit-transform:translate3d(0,300px,0);transform:translate3d(0,300px,0);-ms-transform:translate3d(0,300px,0);}
+100%{-webkit-transform:none;transform:none;-ms-transform:none;}
+}
+
+
+
+
 .pin{padding:5px 0 0 5px;float:left}
 .img-container .box{float:left;padding-left:0;border:1px solid #ccc;box-shadow:0 0 6px #ccc;border-radius:5px}
 .img-container .box img{width:auto}
