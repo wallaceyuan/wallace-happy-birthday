@@ -18,7 +18,7 @@ define({
 
 		var winHeight =$window.height();
 		
-		$('#slideone').height(winHeight);
+		$('#slideone .balloon').height(winHeight);
 
 
 
