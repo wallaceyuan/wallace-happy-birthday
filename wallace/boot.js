@@ -36,15 +36,29 @@ var demoNewPage = {
 
 var demoNew = {
   route: 'demo/newpageright',
-  classname: 'demo-newpager',
+  classname: 'demo-cake',
   animate: 'slideInLeft',
   view: function() {
     var $page = this
-    requirejs(['demo.newpage2'], function(viewData) {
+    requirejs(['demo.cake'], function(viewData) {
       $doc.trigger('spa:initpage', [$page, viewData])
     })
   }
 }
+
+/*var demoNewCake = {
+  route: 'demo/cake',
+  classname: 'demo-cake',
+  animate: 'slideInRight',
+  view: function() {
+    var $page = this
+    requirejs(['demo.cake'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}*/
+
+
 
 // demo:页面视图转换动画
 var demoTransitPage = {
@@ -60,7 +74,7 @@ var demoTransitPage = {
 }
 
 
-$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew, demoTransitPage])
+$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew,demoTransitPage])
 
 // 导航菜单面板
 var panelMenu = {
