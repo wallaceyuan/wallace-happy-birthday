@@ -229,15 +229,16 @@ define({
 						$('.pin').eq(i-1).find('img').css('width',zWP);
 						$('.pin').eq(i-1).find('img').attr('data-original',imgsrc);
 					}
-/*					setTimeout(function () {
-						waterfall()
-					}, 1000);*/
+
 				}
 				$(function() {
 					$('.pin img').lazyload({
 						effect:'fadeIn',
 						event: 'scrollstop'
 					});
+					setTimeout(function () {
+						waterfall();
+					}, 1000);
 				});
 				
 				/*瀑布流*/
