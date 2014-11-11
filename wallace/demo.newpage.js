@@ -177,13 +177,14 @@ define({
 					}
 				}
 				$('.page-container-navbar').on('scroll',function(){
+
 					var dataInt={'data':[{'src':'1.jpg'},{'src':'2.jpg'},{'src':'3.jpg'},{'src':'4.jpg'}]};
-					if(checkscrollside()){
-						alert(1);
+					if(checkscrollside() == 1){
 						$.each( dataInt.data, function( index, value ){
+							console.log(value.src);
 							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
 							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-							$('<img>').attr('src','./images/' + $( value).attr( 'src') ).appendTo($oBox);
+							$('<img>').attr('src','images/' + value.src).appendTo($oBox);
 						});
 /*						waterfall();
 */					};
@@ -205,8 +206,7 @@ define({
 					var scrollTop = $('.page-container-navbar').scrollTop();//注意解决兼容性
 					var documentH = $(document).width();//页面高度
 					console.log(lastPinH,scrollTop,documentH);
-					console.log($aPin.eq(0));
-					return (lastPinH < scrollTop + documentH ) ? true : false;//到达指定高度后 返回true，触发waterfall()函数
+					return (lastPinH > scrollTop + documentH ) ? 1 : false;//到达指定高度后 返回true，触发waterfall()函数
 				}
 
 				render();
@@ -237,6 +237,8 @@ define({
 						event: 'scrollstop'
 					});
 					var int= setInterval(waterfall,2000);
+
+
 				});
 				
 				/*瀑布流*/
