@@ -12,15 +12,12 @@ define({
 		}
 		
 		$('pre', $view).each(function(i, e) { hljs.highlightBlock(e) })
-		
-		
+
 		var $window = $(window);
 
 		var winHeight =$window.height();
 		
 		$('#slideone .balloon').height(winHeight);
-
-
 
 		$view.on('click', '.btn-demo-panel', function(event) {
 		event.preventDefault()

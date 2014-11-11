@@ -10,7 +10,9 @@ ul{list-style:none}
 .spa-page-body{
 	background: #000;
 }
-
+a:hover, a:focus{
+	text-decoration: none;
+}
 
 
 /* 首页 */
@@ -50,6 +52,18 @@ ul{list-style:none}
 @keyframes up{0%{-webkit-transform:translate3d(0,200px,0);transform:translate3d(0,200px,0);-ms-transform:translate3d(0,200px,0);}
 100%{-webkit-transform:none;transform:none;-ms-transform:none;}
 }
+/* 主页 */
+#index_home{background:#09090a;}
+#index_home .container{position:relative;}
+#index_home .homeW .portrait{position:absolute;top:30%;left:33%;width:40%;}
+#index_home .homeW .portrait i{display:block;padding:5%;width:100%;border-radius:50%;background:#5d6d7e;}
+#index_home .homeW .portrait i img{display:block;width:100%;border:1px solid #393a18;border-radius:50%;vertical-align:middle;}
+#index_home .homeW .food{cursor: pointer;position:absolute;top:20%;left:10%;border-radius:50%;background:rgb(30, 103, 30);}
+#index_home .homeW .pic{cursor: pointer;position:absolute;top:20%;right:4%;border-radius:50%;background:rgb(187, 29, 29);}
+#index_home .homeW .music{cursor: pointer;position:absolute;right:4%;bottom:20%;border-radius:50%;background:rgb(160, 160, 2);}
+#index_home .homeW .message{cursor: pointer;position:absolute;bottom:20%;left:10%;border-radius:50%;background:rgb(26, 59, 118);}
+.homeW .food i,.homeW .pic i,.homeW .music i,.homeW .message i{display:block;width:64px;height:64px;color:#fff;text-align:center;font:1em/1 "黑体";}
+.homeW .food i img,.homeW .pic i img,.homeW .music i img,.homeW .message i img{display:block;padding:10% 25% 0;width:100%;vertical-align:middle;}
 
 
 

@@ -81,6 +81,19 @@ body{
 100%{-webkit-transform:none;transform:none;-ms-transform:none;}
 }
 
+/* 主页 */
+#index_home{background:#09090a;}
+#index_home .container{position:relative;}
+#index_home .homeW .portrait{position:absolute;top:30%;left:30%;width:40%;}
+#index_home .homeW .portrait i{display:block;padding:5%;width:100%;border-radius:50%;background:#5d6d7e;}
+#index_home .homeW .portrait i img{display:block;width:100%;border:1px solid #393a18;border-radius:50%;vertical-align:middle;}
+#index_home .homeW .food{position:absolute;top:30%;left:10%;border-radius:50%;background:green;}
+#index_home .homeW .pic{position:absolute;top:30%;right:4%;border-radius:50%;background:red;}
+#index_home .homeW .music{position:absolute;right:4%;bottom:30%;border-radius:50%;background:yellow;}
+#index_home .homeW .message{position:absolute;bottom:30%;left:10%;border-radius:50%;background:black;}
+.homeW .food i,.homeW .pic i,.homeW .music i,.homeW .message i{display:block;width:64px;height:64px;color:#fff;text-align:center;font:1em/1 "黑体";}
+.homeW .food i img,.homeW .pic i img,.homeW .music i img,.homeW .message i img{display:block;padding:10% 25% 0;width:50%;vertical-align:middle;}
+
 </style>
 <body>
 	<div class="swiper-container" id="slider1">
@@ -113,6 +126,47 @@ body{
 							<p>淡定 从容 优雅的小太阳</p>
 							<p>愿你的每一天 都是风和日丽</p>
 							<p>生日快乐</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide" id="index_home">
+				<div class="container">
+					<div class="homeW">
+						<div class="portrait">
+							<i>
+								<img src="images/indexshow.jpg">
+							</i>
+						</div>
+						<div class="food">
+							<a href="#demo/newpageright">
+								<i>
+									<img src="images/eatcake.png">
+									<span>蛋糕</span>
+								</i>
+							</a>
+						</div>
+						<div class="music">
+							<a href="#" data-panel="demoPanelSidemenu">
+								<i>
+									<img src="images/indexmusic.png">
+									<span>音乐</span>
+								</i>
+							</a>
+						</div>
+						<div class="pic">
+							<a href="#demo/newpage">
+							<i>
+								<img src="images/indexpic.png">
+								<span>图片</span>
+								
+							</i></a>
+						</div>
+						<div class="message">
+							<i>
+								<img src="images/indexmes.png">
+								<span>百科</span>
+							</i>
 						</div>
 					</div>
 				</div>
