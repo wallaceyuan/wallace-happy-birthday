@@ -236,9 +236,7 @@ define({
 						effect:'fadeIn',
 						event: 'scrollstop'
 					});
-					setTimeout(function () {
-						waterfall();
-					}, 1000);
+					var int= setInterval(waterfall,2000);
 				});
 				
 				/*瀑布流*/
