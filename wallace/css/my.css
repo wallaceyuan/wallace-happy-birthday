@@ -18,38 +18,16 @@ a:hover, a:focus{
 /* 首页 */
 #slide_three{background:#09090a}
 #slide_three .container{width:90%;margin:0 auto}
-.indexw{position:relative}
 #indexo{width:40%;position:absolute;top:32%;left:22%}
 #indext{width:30%;position:absolute;top:20%;right:21%}
+#slide_three p{position:absolute;right:20%;bottom:10%;color:#fff;font:1.5em/1 "微软雅黑";}
+.indexw{position:relative}
 .indeximg i{width:100%;display:block;border-radius:50%}
 .indeximg i img{width:100%;display:block;vertical-align:middle;border-radius:50%;border:1px solid #393a18}
-#slide_three p {
-	position: absolute;
-	right: 20%;
-	bottom: 10%;
-	color: #fff;
-	font: 1.5em/1 "微软雅黑";
+#indexo img,#indext img{display:block;-webkit-backface-visibility:hidden;-webkit-animation-name:large;animation-name:large;-webkit-animation-duration:3s;animation-duration:3s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+@-webkit-keyframes large{0%{-webkit-transform:scale(2,2);transform:scale(2,2);}
+100%{-webkit-transform:none;transform:none;}
 }
-
-#indexo img,#indext img{
-	-webkit-animation-name: large;
-	animation-name: large;
-	-webkit-backface-visibility: hidden;
-}
-#indexo img,#indext img{display:block;-webkit-animation-duration:3s;animation-duration:3s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
-
-@-webkit-keyframes large {
-	0% {
-		-webkit-transform: scale(2,2);
-		transform:  scale(2,2);
-	}
-
-	100% {
-		-webkit-transform: none;
-		transform: none;
-	}
-}
-
 
 /* 第二页  气球 */
 #slideone{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
@@ -92,6 +70,14 @@ a:hover, a:focus{
 .homeW .food i,.homeW .pic i,.homeW .music i,.homeW .message i{display:block;color:#fff;text-align:center;font:1em/1 "黑体";}
 .homeW .food i img,.homeW .pic i img,.homeW .music i img,.homeW .message i img{display:block;padding:10% 25% 0;width:100%;vertical-align:middle;}
 
+/* 资料 */
+.wallace_data{margin:0 auto;max-width:600px;}
+.wa_img{width:100%;}
+.wa_img img{display:block;width:100%;}
+.intro{padding:3% 5%;border:#cecece;background: #fff;margin: 0 auto;font: 1em/1.4 "黑体";}
+.wallace_data{background: #fff;}
+
+/* 蛋糕 */
 .pin{padding:5px 0 0 5px;float:left}
 .img-container .box{float:left;padding-left:0;border:1px solid #ccc;box-shadow:0 0 6px #ccc;border-radius:5px}
 .img-container .box img{width:auto}
@@ -100,7 +86,6 @@ a:hover, a:focus{
 .cakw{width:100%;position:absolute;bottom:10%;left:0;text-align:center}
 .cakw i{width:35%;height:100%;display:inline-block}
 .cakw i img{display:block;width:100%}
-
 
 /*音乐*/
 body{color:#666;font-family:sans-serif;}
@@ -123,7 +108,6 @@ li.playing:before{position:absolute;top:9px;left:-24px;margin:0;padding:3px;widt
 @media screen and (max-device-width:480px){#wrapper{position:relative;left:-3%;}
 #shortcuts{display:none;}
 }
-
 
 /* 气球 */
 .balloon{position:relative;margin:0 auto;padding-top:30px;width:738px;}
@@ -191,6 +175,3 @@ li.playing:before{position:absolute;top:9px;left:-24px;margin:0;padding:3px;widt
 50%{transform:translate(-15px,10px) rotate(10deg);}
 }
 h1{position:relative;top:200px;color:white;text-align:center;font-size:3.5em;}
-
-
-

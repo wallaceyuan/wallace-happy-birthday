@@ -46,17 +46,17 @@ var demoNew = {
   }
 }
 
-/*var demoNewCake = {
-  route: 'demo/cake',
-  classname: 'demo-cake',
+var demoNewMes = {
+  route: 'demo/message',
+  classname: 'demo-message',
   animate: 'slideInRight',
   view: function() {
     var $page = this
-    requirejs(['demo.cake'], function(viewData) {
+    requirejs(['demo.message'], function(viewData) {
       $doc.trigger('spa:initpage', [$page, viewData])
     })
   }
-}*/
+}
 
 
 
@@ -74,7 +74,7 @@ var demoTransitPage = {
 }
 
 
-$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew,demoTransitPage])
+$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew,demoNewMes,demoTransitPage])
 
 // 导航菜单面板
 var panelMenu = {

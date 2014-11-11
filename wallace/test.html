@@ -8,72 +8,20 @@
 <script type="text/javascript" src="../assets/js/idangerous.swiper-2.1.min.js"></script>
 <script type="text/javascript" src="../assets/js/zepto.min.js"></script>
 <style type="text/css">
-body{
-	font:16px/1.5 微软雅黑;
-}
-#slide_three{
-	background: #09090A;
-}
-#slide_three .container{
-	position: relative;
-	width: 90%;
-	margin: 0 auto;
-}
-.indexw{
-	position: relative;
-}
-#indexo{
-	width: 40%;
-	position: absolute;
-	top: 32%;
-	left: 22%;
-}
-
-
-#indexo img,#indext img{
-	-webkit-animation-name: large;
-	animation-name: large;
-	-webkit-backface-visibility: hidden;
-}
+body{font:16px/1.5 微软雅黑;}
+#slide_three{background:#09090a;}
+#slide_three .container{position:relative;margin:0 auto;width:90%;}
+.indexw{position:relative;}
+#indexo{position:absolute;top:32%;left:22%;width:40%;}
+#indexo img,#indext img{-webkit-animation-name:large;animation-name:large;-webkit-backface-visibility:hidden;}
 #indexo img,#indext img{display:block;-webkit-animation-duration:3s;animation-duration:3s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
-
-@-webkit-keyframes large {
-	0% {
-		-webkit-transform: scale(2,2);
-		transform:  scale(2,2);
-	}
-
-	100% {
-		-webkit-transform: none;
-		transform: none;
-	}
+@-webkit-keyframes large{0%{-webkit-transform:scale(2,2);transform:scale(2,2);}
+100%{-webkit-transform:none;transform:none;}
 }
-#indext{
-	width: 30%;
-	position: absolute;
-	top: 20%;
-	right: 21%;
-}
-.indeximg i{
-	width: 100%;
-	display: block;
-	border-radius: 50%;
-}
-.indeximg i img{
-	width: 100%;
-	display: block;
-	vertical-align: middle;
-	border-radius: 50%;
-	border: 1px solid #393A18;
-}
-#slide_three p{
-	position: absolute;
-	bottom: 10%;
-	right: 20%;
-	font: 1.5em/1 "微软雅黑";
-	color: #fff;
-}
-
+#indext{position:absolute;top:20%;right:21%;width:30%;}
+.indeximg i{display:block;width:100%;border-radius:50%;}
+.indeximg i img{display:block;width:100%;border:1px solid #393a18;border-radius:50%;vertical-align:middle;}
+#slide_three p{position:absolute;right:20%;bottom:10%;color:#fff;font:1.5em/1 "微软雅黑";}
 /* 气球 */
 #slideone{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
 /* 祝福 */
@@ -114,8 +62,32 @@ body{
 .homeW .food i,.homeW .pic i,.homeW .music i,.homeW .message i{display:block;color:#fff;text-align:center;font:1em/1 "黑体";}
 .homeW .food i img,.homeW .pic i img,.homeW .music i img,.homeW .message i img{display:block;padding:10% 25% 0;width:50%;vertical-align:middle;}
 #index_home .homeW .cool{width: 20%;}
+
+/* 资料 */
+.wallace_data{margin:0 auto;max-width:600px;}
+.wa_img{width:100%;}
+.wa_img img{display:block;width:100%;}
+.intro{padding:5%;border:#cecece;border-radius:10px;}
+
 </style>
 <body>
+	<div class="wallace_data">
+		<div class="wa_img">
+			<img src="images/ms_pic.jpg">
+		</div>
+		<div class="intro">
+			<p class="about_pp">中文名：钟汉良<br>
+			英文名：Wallace Chung<br>
+			生肖：虎<br>
+			星座：射手座<br>
+			祖籍：广东省惠州市惠阳区<br>
+			家庭成员：父，母，两姐，一妹<br>
+			语言：国语，粤语，英语<br>
+			爱好：网球，游泳，跑步，摄影，看书，背唐诗，晒太阳<br>
+			对自己的评价： <br>
+			对任何事物都有好奇心，更因为有趣而激起好学心。</p>
+		</div>
+	</div>
 	<div class="swiper-container" id="slider1">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide" id="slide_three">
@@ -201,7 +173,8 @@ body{
 	var winHeight =$window.height();
 	$(".swiper-slide").css("height",winHeight);
 	$(".container").css("height",winHeight);
-
+	$('.wallace_data').css("height",winHeight);
+	
 	var swiperNested1 = new Swiper("#slider1",{
 
 		mode:"vertical",
