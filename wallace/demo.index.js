@@ -7,6 +7,7 @@ define({
 				<div class="swiper-slide" id="index_home"><div class="container"><div class="homeW"><div class="portrait"><i><img src="images/indexshow.jpg"></i></div><div class="food cool"><a href="#demo/newpageright"><i><img src="images/eatcake.png"><span>蛋糕</span></i></a></div><div class="music cool"><a href="#" data-panel="demoPanelSidemenu" class="btn-demo-panel"><i><img src="images/indexmusic.png"><span>音乐</span></i></a></div><div class="pic cool"><a href="#demo/newpage"><i><img src="images/indexpic.png"><span>图片</span></i></a></div><div class="message cool"><a href="#demo/message"><i><img src="images/indexmes.png"><span>百科</span></i></a></div></div></div></div>\
 			</div>\
 		  </div>\
+		  <div class="pagination"></div>\
 		 ',
 	init: function(pageData) {
 		var $view = this
@@ -32,6 +33,8 @@ define({
 		$('.cool').height(cWidth);
 
 		var swiperNested1 = new Swiper("#slider1",{
+
+			pagination: '.pagination',
 
 			mode:"vertical",
 

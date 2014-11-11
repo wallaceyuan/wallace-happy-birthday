@@ -13,8 +13,26 @@ ul{list-style:none}
 a:hover, a:focus{
 	text-decoration: none;
 }
-
-
+/* 滑动 */
+.swiper-pagination-switch {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background: #EFEFEF;
+	box-shadow: 0px 1px 2px #555 inset;
+	margin: 0 3%;
+	cursor: pointer;
+}
+.swiper-active-switch {
+	background: #4c80fc;
+}
+.pagination {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+}
 /* 首页 */
 #slide_three{background:#09090a}
 #slide_three .container{width:90%;margin:0 auto}
