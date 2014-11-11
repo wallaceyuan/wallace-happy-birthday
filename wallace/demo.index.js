@@ -4,7 +4,7 @@ define({
 			<div class="swiper-wrapper">\
 				<div class="swiper-slide" id="slide_three"><div class="container"><div class="indeximg" id="indexo"><i><img src="images/index1.jpg"></i></div><div class="indeximg" id="indext"><i><img src="images/index2.jpg"></i></div><p class="name">钟汉良</p></div></div>\
 				<div class="swiper-slide" id="slidetwo"><div class="container"><div class="left_img"><i class="move-down"><img src="images/bg.png"></i></div><div class="right_img"><i class="move-up"><img src="images/bg2.png"></i></div><div class="right_inf"><div id="slogan_1"><p>淡定 从容 优雅的小太阳</p><p>愿你的每一天 都是风和日丽</p><p>生日快乐</p></div></div></div></div>\
-<div class="swiper-slide" id="index_home"><div class="container"><div class="homeW"><div class="portrait"><i><img src="images/indexshow.jpg"></i></div><div class="food"><a href="#demo/newpageright"><i><img src="images/eatcake.png"> <span>蛋糕</span></i></a></div><div class="music"><a href="#" data-panel="demoPanelSidemenu" class="btn-demo-panel"><i><img src="images/indexmusic.png"> <span>音乐</span></i></a></div><div class="pic"><a href="#demo/newpage"><i><img src="images/indexpic.png"> <span>图片</span></i></a></div><div class="message"><i><img src="images/indexmes.png"> <span>百科</span></i></div></div></div></div>\
+				<div class="swiper-slide" id="index_home"><div class="container"><div class="homeW"><div class="portrait"><i><img src="images/indexshow.jpg"></i></div><div class="food cool"><a href="#demo/newpageright"><i><img src="images/eatcake.png"> <span>蛋糕</span></i></a></div><div class="music cool"><a href="#" data-panel="demoPanelSidemenu" class="btn-demo-panel"><i><img src="images/indexmusic.png"> <span>音乐</span></i></a></div><div class="pic cool"><a href="#demo/newpage"><i><img src="images/indexpic.png"> <span>图片</span></i></a></div><div class="message cool"><i><img src="images/indexmes.png"> <span>百科</span></i></div></div></div></div>\
 				</div>\
 		  </div>\
 		 ',
@@ -26,6 +26,10 @@ define({
 		
 		$(".swiper-slide").css("height",winHeight);
 		$(".container").css("height",winHeight);
+		
+		
+		var  cWidth = $('.cool').width();
+		$('.cool').height(cWidth);
 
 		var swiperNested1 = new Swiper("#slider1",{
 
