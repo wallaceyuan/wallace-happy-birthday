@@ -165,13 +165,13 @@ define({
 				var dataInt;
 				render();
 				$('#img_container').on('scroll',function(){
+					var jsonid = 1;
+					var url = data+jsonid.json;
 					if(checkscrollside()){
 						$.getJSON(url,function(data){
 							dataInt = data;
-							console.log(dataInt);
 						},"json");
 						$.each(dataInt.data, function( index, value ){
-							console.log(value.src);
 							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
 							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
 							$('<img>').css().css('width',zWP).attr('data-original','images/' + value.src).appendTo($oBox);
