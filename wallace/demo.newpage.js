@@ -60,8 +60,8 @@ define({
 					var total = 28;
 					var tmpl = '';
 					$.getJSON(url,function(data){
-						dataInt = data;
-						console.log(dataInt);
+						var dataInt = data;
+						console.log(data);
 					},"json");
 					$.each(dataInt.data, function( index, value ){
 						console.log(value.src);
