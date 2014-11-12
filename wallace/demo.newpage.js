@@ -159,14 +159,15 @@ define({
 				var zWP = winWidth *0.2 +'px';
 				var total = 17;
 				var zWin = $(window);
-				var url = "data.json";
+				var urloru = "data";
 				var ident = true;
 				var wdent = true;
 				var dataInt;
 				render();
 				$('#img_container').on('scroll',function(){
 					var jsonid = 1;
-					var url = data+jsonid.json;
+					var url = urloru+jsonid.json;
+					console.log(url);
 					if(checkscrollside()){
 						$.getJSON(url,function(data){
 							dataInt = data;
