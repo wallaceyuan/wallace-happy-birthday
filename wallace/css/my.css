@@ -49,7 +49,12 @@ a:hover, a:focus{
 
 /* 第二页  气球 */
 #slideone{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
-
+/* 图片 */
+#img_container{
+	position: relative;
+	overflow: scroll;
+	height: 100%;
+}
 /* 第三页 祝福*/
 #slidetwo{background:#fff;}
 #slidetwo .container{position:relative;}
