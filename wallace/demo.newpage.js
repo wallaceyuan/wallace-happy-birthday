@@ -1,150 +1,148 @@
 define({
 	title: 'Wallace Pic',
-	body: '<div class="page-container-navbar">\
-				<div class="container">\
-					<ul class="img-container clearfix" id="container">\
-						<div class="pin">\
-							<div data-id="1" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+	body: '<div class="container">\
+				<ul class="img-container clearfix" id="container">\
+					<div class="pin">\
+						<div data-id="1" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="2" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="2" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="3" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="3" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="4" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="4" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="5" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="5" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="6" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="6" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="7" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="7" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="8" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="8" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="9" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="9" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="10" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="10" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="11" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="11" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="12" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="12" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="13" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="13" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="14" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="14" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="15" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="15" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="16" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="16" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="17" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="17" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="18" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="18" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="19" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="19" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="20" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="20" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="21" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="21" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="22" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="22" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="23" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="23" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="24" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="24" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="25" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="25" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="26" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="26" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="27" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="27" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-						<div class="pin">\
-							<div data-id="28" class="animated bounceIn box">\
-								<img src="wallace.gif">\
-							</div>\
+					</div>\
+					<div class="pin">\
+						<div data-id="28" class="animated bounceIn box">\
+							<img src="wallace.gif">\
 						</div>\
-					</ul>\
-				</div>\
+					</div>\
+				</ul>\
 			</div>\
 			<div class="large animated fadeInDown" id="large_container" style="display:none">\
 				<img id="large_img">\
