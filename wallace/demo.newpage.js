@@ -61,13 +61,14 @@ define({
 					var tmpl = '';
 					$.getJSON(url,function(data){
 						dataInt = data;
-						$.each(dataInt.data, function( index, value ){
-							console.log(value.src);
-							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
-							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-							$('<img>').css().css('width',zWP).attr('data-original','images/' + value.src).appendTo($oBox);
-						});
+						console.log(dataInt);
 					},"json");
+					$.each(dataInt.data, function( index, value ){
+						console.log(value.src);
+						var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
+						var $oBox = $('<div>').addClass('box').appendTo( $oPin );
+						$('<img>').css().css('width',zWP).attr('data-original','images/' + value.src).appendTo($oBox);
+					});
 					lazy();
 				}
 				function lazy(){
