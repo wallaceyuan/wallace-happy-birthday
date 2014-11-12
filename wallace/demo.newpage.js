@@ -170,13 +170,14 @@ define({
 				var url = "data.json";
 				var ident = true;
 				var wdent = true;
+				var dataInt;
 				render();
 				$('.page-container-navbar').on('scroll',function(){
 					$.getJSON(url,function(data){
 						if(!data.length||data.length==0){
 							ident = false;
 						}else{
-							var dataInt= data;
+							dataInt = data;
 							console.log(dataInt);
 						}
 					},"json");
