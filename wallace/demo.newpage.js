@@ -69,6 +69,10 @@ define({
 							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
 							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
 							$('<img>').css('width',zWP).attr({"src":"images/wallace.gif","data-original":'images/' + value.src}).appendTo($oBox);
+							$('.pin img').lazyload({
+								effect:'fadeIn',
+								event: 'scrollstop'
+							});
 						});
 					},"json");
 				}
