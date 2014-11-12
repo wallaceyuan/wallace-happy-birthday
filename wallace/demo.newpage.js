@@ -163,43 +163,33 @@ define({
 					url = url || location.href
 					return url.replace(/^[^#]*#?\/?(.*)\/?$/, '$1')
 				}
+				var winWidth = $(window).width();
+				var zWP = winWidth *0.2 +'px';
 				var total = 17;
 				var zWin = $(window);
-				function addLoadEvent(func) { //define a new function called addLoadEvent which takes in one param which should be function
-					var oldonload = window.onload; //assign window.onload event to variable oldonload
-						if (typeof window.onload != 'function') { //if window.onload is not a function,  and thus has never been defined before elsewhere
-							window.onload = func; //assign 'func' to window.onload event. set the function you passed in as the onload function
-						} else {             //if window.onlad is a function - thus already defined, we dont want to overwrite it so we will..
-							window.onload = function() {  //define a new onload function that does the following:
-							oldonload();  //do whatever the old onload function did
-							func();       //and then do whatever your new passed in function does
-						}
-					}
-				}
+				var url = "data.json";
+				var ident = true;
+				var wdent = true;
+				render();
 				$('.page-container-navbar').on('scroll',function(){
-
-					var dataInt={'data':[{'src':'1.jpg'},{'src':'2.jpg'},{'src':'3.jpg'},{'src':'4.jpg'}]};
+					$.getJSON(url,function(data){
+						if(!data.length||data.length==0){
+							ident = false;
+						}else{
+							var dataInt= data;
+							console.log(dataInt);
+						}
+					},"json");
 					if(checkscrollside() == 1){
-						$.each( dataInt.data, function( index, value ){
+						$.each(dataInt.data, function( index, value ){
 							console.log(value.src);
 							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
 							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-							$('<img>').attr('src','images/' + value.src).appendTo($oBox);
+							$('<img>').css().css('width',zWP).attr('data-original','images/' + value.src).appendTo($oBox);
 						});
-/*						waterfall();
-*/					};
+					}
+					lazy();
 				});
-/*				$(window).scroll=function(){
-					alert(1);
-					if(checkscrollside()){
-						$.each( dataInt.data, function( index, value ){
-							var $oPin = $('<div>').addClass('pin').appendTo( $( "#main" ) );
-							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-							$('<img>').attr('src','./images/' + $( value).attr( 'src') ).appendTo($oBox);
-						});
-						waterfall();
-					};
-				}*/
 				function checkscrollside(){
 					var $aPin = $(".pin");
 					var lastPinH = $aPin.last().get(0).offsetTop + Math.floor($aPin.last().height()/2);//创建【触发添加块框函数waterfall()】的高度：最后一个块框的距离网页顶部+自身高的一半(实现未滚到底就开始加载)
@@ -208,39 +198,24 @@ define({
 					console.log(lastPinH,scrollTop,documentH);
 					return (lastPinH > scrollTop + documentH ) ? 1 : false;//到达指定高度后 返回true，触发waterfall()函数
 				}
-
-				render();
-
 				/*图片加载*/
 				function render(){
 					var total = 28;
 					var tmpl = '';
-					var padding = 2 ;
-					var scrollBarWidth = 0;
-					var winWidth = $(window).width();
-					var picWidth = Math.floor((winWidth-padding*3-scrollBarWidth)/4);
-					var zWP = winWidth *0.2 +'px';
 					for(var i=1;i<=total;i++){
-						var p = padding;
-						if(i%4==1){
-							p = 0;
-						}
 						var imgsrc = 'images/'+i+'.jpg';
 						$('.pin').eq(i-1).find('img').css('width',zWP);
 						$('.pin').eq(i-1).find('img').attr('data-original',imgsrc);
 					}
-
+					lazy();
 				}
-				$(function() {
+				function lazy(){
 					$('.pin img').lazyload({
 						effect:'fadeIn',
 						event: 'scrollstop'
 					});
-					var int= setInterval(waterfall,2000);
-
-
-				});
-				
+				}
+				var int= setInterval(waterfall,2000);
 				/*瀑布流*/
 				function waterfall(parent,pin){
 					var $aPin = $( ".pin" );
@@ -293,15 +268,13 @@ define({
 						var winHeight = zWin.height();
 						var realw = parseInt((winWidth - winHeight*w/h)/2);
 						var realh = parseInt((winHeight - winWidth*h/w)/2);
-
 						wImage.css('width','auto').css('height','auto');
 						wImage.css('padding-left','0px').css('padding-top','0px');
 						if(h/w>1.2){
 							 wImage.attr('src',imgsrc).css('height',winHeight).css('padding-left',realw+'px');;
-						}else{	
+						}else{
 							 wImage.attr('src',imgsrc).css('width',winWidth).css('padding-top',realh+'px');
 						}
-						
 						callback&&callback();
 					}
 				}
