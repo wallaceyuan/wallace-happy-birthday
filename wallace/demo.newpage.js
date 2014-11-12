@@ -174,12 +174,8 @@ define({
 				render();
 				$('.page-container-navbar').on('scroll',function(){
 					$.getJSON(url,function(data){
-						if(!data.length||data.length==0){
-							ident = false;
-						}else{
-							dataInt = data;
-							console.log(dataInt);
-						}
+						dataInt = data;
+						console.log(dataInt);
 					},"json");
 					if(checkscrollside() == 1){
 						$.each(dataInt.data, function( index, value ){
