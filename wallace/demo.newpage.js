@@ -60,6 +60,7 @@ define({
 					var total = 28;
 					var tmpl = '';
 					$.getJSON(url,function(data){
+						dataInt = data;
 						$.each(dataInt.data, function( index, value ){
 							console.log(value.src);
 							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
