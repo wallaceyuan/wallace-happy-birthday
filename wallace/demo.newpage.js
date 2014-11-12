@@ -59,16 +59,31 @@ define({
 				function render(){
 					var total = 28;
 					var tmpl = '';
+					var response ='';
+/*					$.get(url, function (data)
+					{
+					    if (data.length)
+					    {
+					    	for(var i=0;i<data.length;i++){
+					    		response += '<div class="pin"></div>';
+					    	}
+					    	$(".sumbox").prepend(response);
+					    	$("#pullDown").hide();
+					    }
+					});*/
+					
+					
 					$.getJSON(url,function(data){
 						var dataInt = data;
 						console.log(data);
+						$.each(dataInt.data, function( index, value ){
+							console.log(value.src);
+							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
+							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
+							$('<img>').css().css('width',zWP).attr('data-original','images/' + value.src).appendTo($oBox);
+						});
 					},"json");
-					$.each(dataInt.data, function( index, value ){
-						console.log(value.src);
-						var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
-						var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-						$('<img>').css().css('width',zWP).attr('data-original','images/' + value.src).appendTo($oBox);
-					});
+					
 					lazy();
 				}
 				function lazy(){
