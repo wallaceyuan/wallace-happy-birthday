@@ -173,11 +173,11 @@ define({
 				var dataInt;
 				render();
 				$('.page-container-navbar').on('scroll',function(){
-					$.getJSON(url,function(data){
-						dataInt = data;
-						console.log(dataInt);
-					},"json");
 					if(checkscrollside() == 1){
+						$.getJSON(url,function(data){
+							dataInt = data;
+							console.log(dataInt);
+						},"json");
 						$.each(dataInt.data, function( index, value ){
 							console.log(value.src);
 							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
