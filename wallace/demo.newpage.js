@@ -9,6 +9,146 @@ define({
 			<div class="page-container-navbar">\
 				<div class="container">\
 					<ul class="img-container clearfix" id="container">\
+						<div class="pin">\
+							<div data-id="1" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="2" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="3" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="4" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="5" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="6" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="7" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="8" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="9" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="10" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="11" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="12" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="13" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="14" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="15" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="16" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="17" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="18" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="19" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="20" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="21" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="22" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="23" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="24" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="25" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="26" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="27" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
+						<div class="pin">\
+							<div data-id="28" class="animated bounceIn box">\
+								<img src="wallace.gif">\
+							</div>\
+						</div>\
 					</ul>\
 				</div>\
 			</div>\
@@ -32,8 +172,7 @@ define({
 				var wdent = true;
 				var dataInt;
 				render();
-				lazy();
-/*				$('.page-container-navbar').on('scroll',function(){
+				$('.page-container-navbar').on('scroll',function(){
 					if(checkscrollside() == 1){
 						$.getJSON(url,function(data){
 							dataInt = data;
@@ -47,7 +186,7 @@ define({
 						});
 					}
 					lazy();
-				});*/
+				});
 				function checkscrollside(){
 					var $aPin = $(".pin");
 					var lastPinH = $aPin.last().get(0).offsetTop + Math.floor($aPin.last().height()/2);//创建【触发添加块框函数waterfall()】的高度：最后一个块框的距离网页顶部+自身高的一半(实现未滚到底就开始加载)
@@ -60,21 +199,12 @@ define({
 				function render(){
 					var total = 28;
 					var tmpl = '';
-					var response ='';
-					$.getJSON(url,function(data){
-						var dataInt = data;
-						console.log(data);
-						$.each(dataInt.data, function( index, value ){
-							console.log(value.src);
-							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
-							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-							$('<img>').css('width',zWP).attr({"src":"images/wallace.gif","data-original":'images/' + value.src}).appendTo($oBox);
-							$('.pin img').lazyload({
-								effect:'fadeIn',
-								event: 'scrollstop'
-							});
-						});
-					},"json");
+					for(var i=1;i<=total;i++){
+						var imgsrc = 'images/'+i+'.jpg';
+						$('.pin').eq(i-1).find('img').css('width',zWP);
+						$('.pin').eq(i-1).find('img').attr('data-original',imgsrc);
+					}
+					lazy();
 				}
 				function lazy(){
 					$('.pin img').lazyload({
