@@ -32,7 +32,7 @@ define({
 				var wdent = true;
 				var dataInt;
 				render();
-				$('.page-container-navbar').on('scroll',function(){
+/*				$('.page-container-navbar').on('scroll',function(){
 					if(checkscrollside() == 1){
 						$.getJSON(url,function(data){
 							dataInt = data;
@@ -46,7 +46,7 @@ define({
 						});
 					}
 					lazy();
-				});
+				});*/
 				function checkscrollside(){
 					var $aPin = $(".pin");
 					var lastPinH = $aPin.last().get(0).offsetTop + Math.floor($aPin.last().height()/2);//创建【触发添加块框函数waterfall()】的高度：最后一个块框的距离网页顶部+自身高的一半(实现未滚到底就开始加载)
