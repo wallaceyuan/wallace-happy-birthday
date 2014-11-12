@@ -1,12 +1,6 @@
 define({
 	title: 'Wallace Pic',
-	body: '<nav class="navbar navbar-default navbar-static-top" role="navigation">\
-				<div class="navbar-header">\
-					<a class="navbar-brand" href="#demo/newpage">新页面</a>\
-				</div>\
-				<a href="#" class="btn btn-default navbar-btn btn-link pull-left"><span class="glyphicon glyphicon-chevron-left"></span></a>\
-			</nav>\
-			<div class="page-container-navbar">\
+	body: '<div class="page-container-navbar">\
 				<div class="container">\
 					<ul class="img-container clearfix" id="container">\
 						<div class="pin">\
