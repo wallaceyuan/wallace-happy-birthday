@@ -117,31 +117,6 @@ define({
 							<img src="wallace.gif">\
 						</div>\
 					</div>\
-					<div class="pin">\
-						<div data-id="24" class="animated bounceIn box">\
-							<img src="wallace.gif">\
-						</div>\
-					</div>\
-					<div class="pin">\
-						<div data-id="25" class="animated bounceIn box">\
-							<img src="wallace.gif">\
-						</div>\
-					</div>\
-					<div class="pin">\
-						<div data-id="26" class="animated bounceIn box">\
-							<img src="wallace.gif">\
-						</div>\
-					</div>\
-					<div class="pin">\
-						<div data-id="27" class="animated bounceIn box">\
-							<img src="wallace.gif">\
-						</div>\
-					</div>\
-					<div class="pin">\
-						<div data-id="28" class="animated bounceIn box">\
-							<img src="wallace.gif">\
-						</div>\
-					</div>\
 				</ul>\
 			</div>\
 			<div class="large animated fadeInDown" id="large_container" style="display:none">\
@@ -157,25 +132,32 @@ define({
 				}
 				var winWidth = $(window).width();
 				var zWP = winWidth *0.2 +'px';
-				var total = 17;
+				var total = 23;
 				var zWin = $(window);
 				var urloru = "data";
 				var ident = true;
 				var wdent = true;
 				var dataInt;
+				var jsonid = 0;
 				render();
 				$('#img_container').on('scroll',function(){
-					var jsonid = 1;
-					var url = urloru+jsonid.json;
-					console.log(url);
 					if(checkscrollside()){
+						jsonid++;
+						var url = urloru+jsonid;
+						console.log(url);
 						$.getJSON(url,function(data){
-							dataInt = data;
+							if (data.length == 0)
+							{
+								$('#img_container').html('<p style="padding: 15px 0" align="center">' + ('没有内容了') + '</p>');
+							}
+							else{
+								dataInt = data;
+							}
 						},"json");
-						$.each(dataInt.data, function( index, value ){
+						$.each(dataInt.data, function(index,value ){
 							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
 							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-							$('<img>').css().css('width',zWP).attr('data-original','images/' + value.src).appendTo($oBox);
+							$('<img>').css().css('width',zWP).attr('data-original',value.src).appendTo($oBox);
 						});
 					}
 					lazy();
@@ -190,7 +172,6 @@ define({
 				}
 				/*图片加载*/
 				function render(){
-					var total = 28;
 					var tmpl = '';
 					for(var i=1;i<=total;i++){
 						var imgsrc = 'images/'+i+'.jpg';
@@ -241,14 +222,14 @@ define({
 				var wImage = $('#large_img');
 				var domImage = wImage[0];
 				/*加载图片*/
-				var loadImg = function(id,callback){
+				var loadImg = function(id,imgurl,callback){
 					$('#container').css({height:zWin.height(),'overflow':'hidden'});
 					$('#large_container').css({
 						width:zWin.width(),
 						height:zWin.height()
 						//top:$(window).scrollTop()
 					}).show();
-					var imgsrc = 'images/'+id+'.jpg';
+					var imgsrc = imgurl;
 					var ImageObj = new Image();
 					ImageObj.src = imgsrc;
 					ImageObj.onload = function(){
@@ -269,10 +250,11 @@ define({
 					}
 				}
 				/*点击图片*/
-				$('#container').delegate('.box','tap',function(){
-					var _id = cid = $(this).attr('data-id');
-					console.log(cid);
-					loadImg(_id);
+				$('.pin').on('tap',function(){
+					var _id = cid = $(this).index();
+					var imgurl = $(this).find('img').attr('src');
+					console.log(cid,imgurl);
+					loadImg(cid,imgurl);
 				});
 				/*点击返回*/
 				$('#large_container').tap(function(){
@@ -289,9 +271,9 @@ define({
 					return;
 					}
 					cid++;
-					
+					imgurl =  $('.pin').eq(cid).find('img').attr('src');
 					lock =true;
-					loadImg(cid,function(){
+					loadImg(cid,imgurl,function(){
 					domImage.addEventListener('webkitAnimationEnd',function(){
 						wImage.removeClass('animated bounceInRight');
 						domImage.removeEventListener('webkitAnimationEnd');
@@ -307,9 +289,10 @@ define({
 					return;
 					}
 					cid--;
+					imgurl =  $('.pin').eq(cid).find('img').attr('src');
 					lock =true;
 					if(cid>0){
-					loadImg(cid,function(){
+					loadImg(cid,imgurl,function(){
 						domImage.addEventListener('webkitAnimationEnd',function(){
 						wImage.removeClass('animated bounceInLeft');
 						domImage.removeEventListener('webkitAnimationEnd');
