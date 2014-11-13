@@ -157,10 +157,7 @@ define({
 						$.each(dataInt.data, function(index,value ){
 							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
 							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-							$('<img>').css().css('width',zWP).attr({
-								"data-original":value.src,
-								"src":"images/wallace.gif"
-							}}).appendTo($oBox);
+							$('<img>').css().css('width',zWP).attr({"data-original":value.src,"src":"images/wallace.gif"}).appendTo($oBox);
 						});
 					}
 					lazy();
