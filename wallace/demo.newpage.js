@@ -143,7 +143,7 @@ define({
 				$('#img_container').on('scroll',function(){
 					if(checkscrollside()){
 						jsonid++;
-						var url = urloru+jsonid;
+						var url = urloru+jsonid+".json";
 						console.log(url);
 						$.getJSON(url,function(data){
 							if (data.length == 0)
