@@ -176,7 +176,11 @@ define({
 				function render(){
 					var tmpl = '';
 					for(var i=1;i<=total;i++){
-						var imgsrc = 'images/'+i+'.jpg';
+						if(device.type === "mobile"){
+							var imgsrc = 'images/'+i+'.ss.jpg';
+						}else{
+							var imgsrc = 'images/'+i+'.jpg';
+						}
 						$('.pin').eq(i-1).find('img').css('width',zWP);
 						$('.pin').eq(i-1).find('img').attr('data-original',imgsrc);
 					}
