@@ -149,16 +149,18 @@ define({
 							if (data.length == 0)
 							{
 								$('#img_container').html('<p style="padding: 15px 0" align="center">' + ('没有内容了') + '</p>');
+								return;
 							}
 							else{
 								dataInt = data;
+								$.each(dataInt.data, function(index,value){
+									var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
+									var $oBox = $('<div>').addClass('box').appendTo( $oPin );
+									$('<img>').css().css('width',zWP).attr({"data-original":value.src,"src":"images/wallace.gif"}).appendTo($oBox);
+								});
 							}
 						},"json");
-						$.each(dataInt.data, function(index,value ){
-							var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
-							var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-							$('<img>').css().css('width',zWP).attr({"data-original":value.src,"src":"images/wallace.gif"}).appendTo($oBox);
-						});
+
 					}
 					lazy();
 				});
@@ -214,7 +216,6 @@ define({
 							});
 							//数组 最小高元素的高 + 添加上的aPin[i]块框高
 							pinHArr[ minHIndex ] += $aPin.eq( index ).height() + 15;//更新添加了块框后的列高
-						
 						}
 					});
 				}
