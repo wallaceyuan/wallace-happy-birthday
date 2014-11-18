@@ -156,7 +156,12 @@ define({
 								$.each(dataInt.data, function(index,value){
 									var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
 									var $oBox = $('<div>').addClass('box').appendTo( $oPin );
-									$('<img>').css().css('width',zWP).attr({"data-original":value.src,"src":"images/wallace.gif"}).appendTo($oBox);
+									if(device.type === "mobile"){
+										var value = 'images/ss/'+value.src+'';
+									}else{
+										var value = 'images/'+value.src+'';
+									}
+									$('<img>').css().css('width',zWP).attr({"data-original":value,"src":"images/wallace.gif"}).appendTo($oBox);
 								});
 							}
 						},"json");
