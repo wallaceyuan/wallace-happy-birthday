@@ -131,7 +131,7 @@ padding-left: 10px;
 border-bottom: 1px solid #ccc;
 cursor: pointer;
 }
-ul.list-group li a{display:inline-block;padding:0 0 0 20px;text-indent:-3.3ex;}
+ul.list-group li a{display:inline-block;padding:0 0 0 20px;text-indent:-3.3ex;width: 47%;}
 ul.list-group li img{
 	float: right;
 }
