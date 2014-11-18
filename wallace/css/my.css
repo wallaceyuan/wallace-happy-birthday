@@ -29,9 +29,10 @@ a:hover, a:focus{
 }
 .pagination {
 	position: fixed;
-	bottom: 0px;
-	width: 100%;
-	text-align: center;
+	right: 10px;
+	height: 100%;
+	width: 20px;
+	top: 40%;
 }
 /* 首页 */
 #slide_three{background:#09090a}
