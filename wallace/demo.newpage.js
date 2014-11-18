@@ -177,7 +177,7 @@ define({
 					var tmpl = '';
 					for(var i=1;i<=total;i++){
 						if(device.type === "mobile"){
-							var imgsrc = 'images/'+i+'.ss.jpg';
+							var imgsrc = 'images/ss/'+i+'.ss.jpg';
 						}else{
 							var imgsrc = 'images/'+i+'.jpg';
 						}
