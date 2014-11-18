@@ -157,9 +157,9 @@ define({
 									var $oPin = $('<div>').addClass('pin').appendTo( $( "#container" ) );
 									var $oBox = $('<div>').addClass('box').appendTo( $oPin );
 									if(device.type === "mobile"){
-										var value = 'images/ss/'+value.src+'';
+										var value = 'images/ss/'+value.src+'.ss.jpg';
 									}else{
-										var value = 'images/'+value.src+'';
+										var value = 'images/'+value.src+'.jpg';
 									}
 									$('<img>').css().css('width',zWP).attr({"data-original":value,"src":"images/wallace.gif"}).appendTo($oBox);
 								});
