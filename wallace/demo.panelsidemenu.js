@@ -14,8 +14,8 @@ define({
         <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/09-infinite-victory.mp3">infinite victory</a></li>\
         <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/10-the-curious-incident-of-big-poppa-in-the-nighttime.mp3">the curious incident of big poppa in the nighttime</a></li>\
         <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/11-mo-stars-mo-problems.mp3">mo stars mo problems</a></li>\
+        <audio preload></audio>\
       </ul>\
-      <audio preload></audio>\
     </div>\
   </div>\
   ',
