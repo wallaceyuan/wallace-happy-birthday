@@ -141,6 +141,7 @@ define({
 				var jsonid = 0;
 				render();
 				$('#img_container').on('scroll',function(){
+					console.log(1);
 					if(checkscrollside()){
 						jsonid++;
 						var url = urloru+jsonid+".json";
@@ -165,7 +166,6 @@ define({
 								});
 							}
 						},"json");
-
 					}
 					lazy();
 				});
@@ -239,8 +239,7 @@ define({
 						height:zWin.height()
 						//top:$(window).scrollTop()
 					}).show();
-					
-					var imgsrc = 'images/'+(id+1)+'.jpg';
+					var imgsrc = 'images/'+(i+1)+'.jpg';
 					var ImageObj = new Image();
 					ImageObj.src = imgsrc;
 					ImageObj.onload = function(){
@@ -264,6 +263,7 @@ define({
 				$('body').on('tap','.pin',function(){
 					var _id = cid = $(this).index();
 					var imgurl = $(this).find('img').attr('src');
+					console.log(cid,imgurl);
 					loadImg(cid,imgurl);
 				});
 				/*点击返回*/
