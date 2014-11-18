@@ -121,11 +121,19 @@ a{color:#888;text-decoration:none;}
 #wrapper{width:200px;}
 .audiojs{position: fixed;bottom: 0px;left: 0px;}
 ul.list-group{margin:0;padding:0;width:200px;border-top:1px solid #ccc;color:#ccc;list-style:decimal-leading-zero inside;font-size:.9em;}
-ul.list-group li{position:relative;margin:0;margin-left:10px;padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #ccc;cursor:pointer;}
-ul.list-group li a{display:inline-block;padding:0 0 0 20px;text-indent:-3.3ex;}
+ul.list-group li {
+position: relative;
+margin: 0;
+margin-left: 40px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 10px;
+border-bottom: 1px solid #ccc;
+cursor: pointer;
+}ul.list-group li a{display:inline-block;padding:0 0 0 20px;text-indent:-3.3ex;}
 li.playing{color:#aaa;text-shadow:1px 1px 0 rgba(255,255,255,0.3);}
 li.playing a{color:#000;}
-li.playing:before{position:absolute;top:9px;left:-24px;margin:0;padding:3px;width:14px;height:14px;color:#000;content:'♬';text-shadow:1px 1px 0 rgba(0,0,0,0.2);font-size:13px;line-height:14px;}
+li.playing:before{position:absolute;top:9px;left:-24px;margin:0;padding:3px;width:14px;height:14px;color:#000;content:'♬';text-shadow:1px 1px 0 rgba(0,0,0,0.2);font-size:13px;line-height:40px;}
 #shortcuts{position:fixed;bottom:0;margin:60px 0 0;padding:20px 20px 15px;width:100%;background:#f3f3f3;background:rgba(240,240,240,0.7);color:#666;font-size:.9em;}
 #shortcuts div{margin:0 auto;width:460px;}
 #shortcuts h1{margin:0 0 6px;}
