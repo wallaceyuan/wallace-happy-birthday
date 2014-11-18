@@ -3,12 +3,12 @@ define({
     <div class="panel panel-default">\
       <div id="wrapper">\
       <ul class="list-group">\
-        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/故乡香.mp3">故乡香</a></li>\
-        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/救我.mp3">救我</a></li>\
-        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/天下之风.mp3">天下之风</a></li>\
-        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/天涯明月刀.mp3">天涯明月刀</a></li>\
-        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/有一天我们都会老.mp3">有一天我们都会老</a></li>\
-        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/中国山.mp3">中国山</a></li>\
+        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/天涯明月刀.mp3">天涯明月刀</a><img src="images/m1.jpg" width="30" height="30"></li>\
+        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/天下之风.mp3">天下之风</a><img src="images/m3.jpg" width="30" height="30"></li>\
+        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/有一天我们都会老.mp3">有一天我们都会老</a><img src="images/m4.jpg" width="30" height="30"></li>\
+        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/中国山.mp3">中国山</a><img src="images/m2.jpg" width="30" height="30"></li>\
+        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/故乡香.mp3">故乡香</a><img src="images/m2.jpg" width="30" height="30"></li>\
+        <li><a href="#" data-src="http://wallaceyuan.github.io/audiojs/demos/mp3/救我.mp3">救我</a><img src="images/m4.jpg" width="30" height="30"></li>\
       </ul>\
       <audio preload></audio>\
     </div>\
