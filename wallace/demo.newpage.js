@@ -239,7 +239,8 @@ define({
 						height:zWin.height()
 						//top:$(window).scrollTop()
 					}).show();
-					var imgsrc = imgurl;
+					
+					var imgsrc = 'images/'+(id+1)+'.jpg';
 					var ImageObj = new Image();
 					ImageObj.src = imgsrc;
 					ImageObj.onload = function(){
@@ -260,10 +261,9 @@ define({
 					}
 				}
 				/*点击图片*/
-				$('.pin').on('tap',function(){
+				$('body').on('tap','.pin',function(){
 					var _id = cid = $(this).index();
 					var imgurl = $(this).find('img').attr('src');
-					console.log(cid,imgurl);
 					loadImg(cid,imgurl);
 				});
 				/*点击返回*/
