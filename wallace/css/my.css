@@ -45,9 +45,18 @@ a:hover, a:focus{
 .indexw{position:relative}
 .indeximg i{width:100%;display:block;border-radius:50%}
 .indeximg i img{width:100%;display:block;vertical-align:middle;border-radius:50%;border:1px solid #393a18}
-#indexo img,#indext img{display:block;-webkit-backface-visibility:hidden;-webkit-animation-name:large;animation-name:large;-webkit-animation-duration:3s;animation-duration:3s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
-@-webkit-keyframes large{0%{-webkit-transform:scale(2,2);transform:scale(2,2);}
-100%{-webkit-transform:none;transform:none;}
+.swiper-slide-active #indexo img,.swiper-slide-active #indext img{
+	display:block;-webkit-backface-visibility:hidden;
+	-webkit-animation-name:large;
+	animation-name:large;
+	-webkit-animation-duration:3s;
+	animation-duration:3s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+}
+@-webkit-keyframes large{
+	0%{-webkit-transform:scale(2,2);transform:scale(2,2);}
+	100%{-webkit-transform:none;transform:none;}
 }
 
 /* 第二页  气球 */
@@ -62,10 +71,10 @@ a:hover, a:focus{
 #slidetwo{background:#fff;}
 #slidetwo .container{position:relative;}
 .right_inf{position:absolute;top:40%;color:#000;font:1.2em/1.5 "黑体";width: 100%;text-align: center;}
-.left_img{position:relative;float:right;width:50%;height:100%;background:#fff;}
-.left_img i{display:block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
-.left_img i img{display:block;width:109%;vertical-align:middle;}
-.swiper-slide-active .move-down{-webkit-animation-name:down;animation-name:down;-webkit-backface-visibility: hidden;}
+.left_img{position:relative;float:right;width:50%;height:100%;background:#fff;text-align: center;display: block;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.left_img i{display:inline;}
+.left_img i img{display:block;height:100%;vertical-align:middle;}
+.swiper-slide-active .left_img{-webkit-animation-name:down;animation-name:down;-webkit-backface-visibility: hidden;}
 @-webkit-keyframes down{0%{-webkit-transform:translate3d(0,-500px,0);transform:translate3d(0,-500px,0);}
 100%{-webkit-transform:none;transform:none;}
 }
@@ -109,7 +118,14 @@ a:hover, a:focus{
 .img-container .box img{width:auto}
 .large{width:100%;height:100%;position:absolute;top:0;left:0;background-color:black;z-index:3000}
 .container{position:relative}
-.cakw{width:100%;position:fixed;bottom:10%;left:0;text-align:center}
+.wallace_eat{width:100%;position:fixed;bottom:30%;left:0;text-align:center;}
+.wallace_eat i{width:40%;height:100%;display:inline-block;border-radius: 50%;}
+.wallace_eat i img{display:block;width:100%;border-radius: 50%;}
+.wallace_eat{
+	-webkit-backface-visibility: hidden;
+	-webkit-animation: 3s pulse infinite;
+}
+.cakw{width:100%;position:fixed;bottom:5%;left:0;text-align:center;}
 .cakw i{width:35%;height:100%;display:inline-block}
 .cakw i img{display:block;width:100%}
 
