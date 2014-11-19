@@ -239,7 +239,7 @@ define({
 						height:zWin.height()
 						//top:$(window).scrollTop()
 					}).show();
-					var imgsrc = 'images/'+(i+1)+'.jpg';
+					var imgsrc = 'images/'+(id+1)+'.jpg';
 					var ImageObj = new Image();
 					ImageObj.src = imgsrc;
 					ImageObj.onload = function(){
