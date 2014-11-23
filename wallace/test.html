@@ -8,7 +8,12 @@
 <script type="text/javascript" src="../assets/js/idangerous.swiper-2.1.min.js"></script>
 <script type="text/javascript" src="../assets/js/zepto.min.js"></script>
 <style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
 body{font:16px/1.5 微软雅黑;}
+.clearfix:after{display:block;content:"\20";height:0;clear:both;overflow:hidden;visibility:hidden}
 #slide_three{background:#09090a;}
 #slide_three .container{position:relative;margin:0 auto;width:90%;}
 .indexw{position:relative;}
@@ -82,123 +87,84 @@ body{font:16px/1.5 微软雅黑;}
 	-webkit-animation-delay: 0s;
 	-webkit-animation-name: pulse;
 }
+#imgshow{
+	max-width: 640px;
+	margin: 0 auto;
+}
+#imgshow .banner{
+	width: 100%;
+}
+#imgshow .img-list{
+	padding-top: 15px;
+}
+#imgshow .img-content{
+	margin-bottom: 10px;
+}
+#imgshow .title-nav{
+	padding-bottom: 10px;
+	padding-left: 2%;
+	width: 100%;
+}
+#imgshow span.fenlei{
+	display: inline-block;
+	padding:5px;
+	border-left: 5px solid blue;
+	color: #ccc;
+	font-size: 16px;
+}
+#imgshow .img-in{
+	padding-left: 2%;
+	width:47%;
+	float: left;
+	display: inline-block;
+}
+#imgshow .img-in img{
+	width:100%;
+	display:block;
+}
 </style>
 <body>
-	<div class="swiper-container" id="slider1">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide" id="slide_three">
+
+			<div  id="imgshow">
 				<div class="container">
-					<div class="indeximg" id="indexo">
-						<i>
-							<img src="images/index1.jpg">
-						</i>
+					<div class="banner">
+						<img src="images/imgbanner.jpg" width="100%">
 					</div>
-					<div class="indeximg" id="indext">
-						<i>
-							<img src="images/index2.jpg">
-						</i>
-					</div>
-					<p class="name">钟汉良</p>
-				</div>
-			</div>
-			<div class="swiper-slide" id="slidetwo">
-				<div class="container">
-					<div class="left_img">
-						<i class="move-down"><img src="images/bg.png"></i>
-					</div>
-					<div class="right_img">
-						<i class="move-up"><img src="images/bg2.png"></i>
-					</div>
-					<div class="right_inf">
-						<div id="slogan_1">
-							<p>淡定 从容 优雅的小太阳</p>
-							<p>愿你的每一天 都是风和日丽</p>
-							<p>生日快乐</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide" id="index_home">
-				<div class="container">
-					<div class="homeW">
-						<div class="portrait">
-							<i>
-								<img src="images/indexshow.jpg">
-							</i>
-						</div>
-						<div class="food cool">
-							<a href="#demo/newpageright">
-								<i>
-									<img src="images/eatcake.png">
-									<span>蛋糕</span>
-								</i>
-							</a>
-						</div>
-						<div class="music cool">
-							<a href="#" data-panel="demoPanelSidemenu">
-								<i>
-									<img src="images/indexmusic.png">
-									<span>音乐</span>
-								</i>
-							</a>
-						</div>
-						<div class="pic cool">
-							<a href="#demo/newpage">
-							<i>
-								<img src="images/indexpic.png">
-								<span>图片</span>
-								
-							</i></a>
-						</div>
-						<div class="message cool">
-							<i>
-								<img src="images/indexmes.png">
-								<span>百科</span>
-							</i>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide" id="index_home">
-				<div class="container">
-					<div class="swiper-slide" id="slideone">
-						<div class="container">
-							<div class="balloon">
-								<div>
-									<span>☺</span>
+					<div class="img-list">
+						<div class='img-content'>
+							<div class="title-nav">
+								<span class="fenlei">电视剧作品</span>
+							</div>
+							<div class="clearfix">
+								<div class="img-in">
+									<img src="images/gxz.jpg">
 								</div>
-								<div>
-									<span>B</span>
-								</div>
-								<div>
-									<span>D</span>
-								</div>
-								<div>
-									<span>A</span>
-								</div>
-								<div>
-									<span>Y</span>
-								</div>
-								<div>
-									<span>!</span>
+								<div class="img-in">
+									<img src="images/gxz.jpg">
 								</div>
 							</div>
-							<div class="wallace_eat animated ">
-								<i><img src="images/wallaceeat.jpg"></i>
+						</div>
+						<div class='img-content'>
+							<div class="title-nav">
+								<span class="fenlei">电影作品</span>
 							</div>
-							<div class="cakw">
-								<i><img src="images/cake.png"></i>
+							<div class="clearfix">
+								<div class="img-in">
+									<img src="images/gxz.jpg">
+								</div>
+								<div class="img-in">
+									<img src="images/gxz.jpg">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+
 </body>
 <script type="text/javascript">
 	
-	var $window = $(window);
+	/*var $window = $(window);
 
 	var winHeight =$window.height();
 	$(".swiper-slide").css("height",winHeight);
@@ -213,7 +179,7 @@ body{font:16px/1.5 微软雅黑;}
 
 	});
 	var  cWidth = $('.cool').width();
-	$('.cool').height(cWidth);
+	$('.cool').height(cWidth);*/
 	
 </script>
 </html>

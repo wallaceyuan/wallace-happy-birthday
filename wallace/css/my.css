@@ -8,9 +8,9 @@ ul{list-style:none}
 #container{position:relative}
 .main_btn{width:45%;margin-bottom:10px;margin-right:5%;float:left}
 /* 初始spa css */
-.spa-page-body{
+/*.spa-page-body{
 	background: #000;
-}
+}*/
 a:hover, a:focus{
 	text-decoration: none;
 }
@@ -62,10 +62,53 @@ a:hover, a:focus{
 /* 第二页  气球 */
 #slideone{background:#1e1b2e url(../images/index2_back.jpg) center top no-repeat;}
 /* 图片 */
-#img_container{
+/*#img_container{
 	position: relative;
 	overflow: scroll;
 	height: 100%;
+}*/
+.img-container{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0px;
+	bottom: 0;
+}
+#imgshow{
+	max-width: 640px;
+	margin: 0 auto;
+}
+#imgshow .banner{
+	width: 100%;
+}
+#imgshow .img-list{
+	padding-top: 15px;
+}
+#imgshow .img-content{
+	margin-bottom: 10px;
+}
+#imgshow .title-nav{
+	padding-bottom: 10px;
+	padding-left: 2%;
+	width: 100%;
+}
+#imgshow span.fenlei{
+	display: inline-block;
+	padding:5px;
+	border-left: 5px solid blue;
+	color: #ccc;
+	font-size: 16px;
+}
+#imgshow .img-in{
+	cursor: pointer;
+	padding-left: 2%;
+	width:47%;
+	float: left;
+	display: inline-block;
+}
+#imgshow .img-in img{
+	width:100%;
+	display:block;
 }
 /* 第三页 祝福*/
 #slidetwo{background:#fff;}
@@ -94,10 +137,11 @@ a:hover, a:focus{
 /* 主页 */
 #index_home{background:#09090a;}
 #index_home .container{position:relative;}
-#index_home .homeW .portrait{position:absolute;top:30%;left:30%;width:40%;}
+#index_home .homeW{height: 100%;width: 100%;text-align: center;}
+#index_home .homeW .portrait{width:40%;max-width: 360px;display: inline-block;}
 #index_home .homeW .portrait i{display:block;padding:5%;width:100%;border-radius:50%;background:#5d6d7e;}
 #index_home .homeW .portrait i img{display:block;width:100%;border:1px solid #393a18;border-radius:50%;vertical-align:middle;}
-#index_home .homeW .cool{width: 20%;}
+#index_home .homeW .cool{width: 20%;max-width: 120px;max-height: 120px;}
 #index_home .homeW .food{position:absolute;top:20%;left:5%;border-radius:50%;background:rgb(30, 103, 30);}
 #index_home .homeW .pic{position:absolute;top:20%;right:5%;border-radius:50%;background:rgb(187, 29, 29);}
 #index_home .homeW .music{position:absolute;right:5%;bottom:20%;border-radius:50%;background:rgb(160, 160, 2);}
@@ -119,14 +163,14 @@ a:hover, a:focus{
 .large{width:100%;height:100%;position:absolute;top:0;left:0;background-color:black;z-index:3000}
 .container{position:relative}
 .wallace_eat{width:100%;position:fixed;bottom:30%;left:0;text-align:center;}
-.wallace_eat i{width:40%;height:100%;display:inline-block;border-radius: 50%;}
+.wallace_eat i{width:40%;height:100%;display:inline-block;border-radius: 50%;max-width: 240px;}
 .wallace_eat i img{display:block;width:100%;border-radius: 50%;}
 .wallace_eat{
 	-webkit-backface-visibility: hidden;
 	-webkit-animation: 3s pulse infinite;
 }
 .cakw{width:100%;position:fixed;bottom:5%;left:0;text-align:center;}
-.cakw i{width:35%;height:100%;display:inline-block}
+.cakw i{width:35%;height:100%;display:inline-block;max-width: 120px;}
 .cakw i img{display:block;width:100%}
 
 /*音乐*/
@@ -138,14 +182,14 @@ a{color:#888;text-decoration:none;}
 .audiojs{position: fixed;top: 0px;left: 0px;}
 ul.list-group{margin:0;padding:0;width:200px;border-top:1px solid #ccc;color:#ccc;list-style:decimal-leading-zero inside;font-size:.9em;margin-top: 35px;}
 ul.list-group li {
-position: relative;
-margin: 0;
-margin-left: 40px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-left: 10px;
-border-bottom: 1px solid #ccc;
-cursor: pointer;
+	position: relative;
+	margin: 0;
+	margin-left: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
 }
 ul.list-group li a{display:inline-block;padding:0 0 0 20px;text-indent:-3.3ex;width: 47%;}
 ul.list-group li img{

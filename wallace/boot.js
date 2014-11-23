@@ -21,7 +21,7 @@ var pageHome = {
   }
 }
 
-// demo:打开新页面视图
+// demo:打开新页面视图（图片）
 var demoNewPage = {
   route: 'demo/newpage',
   classname: 'demo-newpage',
@@ -33,7 +33,21 @@ var demoNewPage = {
     })
   }
 }
+/*图片二*/
+var demoPic = {
+  route: 'demo/pic',
+  classname: 'demo-pic',
+  animate: 'slideInRight',
+  view: function() {
+    var $page = this
+    requirejs(['demo.pic'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
 
+
+/*蛋糕*/
 var demoNew = {
   route: 'demo/newpageright',
   classname: 'demo-cake',
@@ -45,7 +59,7 @@ var demoNew = {
     })
   }
 }
-
+/*百科*/
 var demoNewMes = {
   route: 'demo/message',
   classname: 'demo-message',
@@ -74,7 +88,7 @@ var demoTransitPage = {
 }
 
 
-$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew,demoNewMes,demoTransitPage])
+$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew,demoNewMes,demoTransitPage,demoPic])
 
 // 导航菜单面板
 var panelMenu = {
@@ -89,7 +103,7 @@ var panelMenu = {
   }
 }
 
-// demo:侧边栏菜单
+// demo:侧边栏菜单（音乐）
 var demoPanelSidemenu = {
   id: 'demoPanelSidemenu',
   classname: 'demo-panel-sidemenu',
