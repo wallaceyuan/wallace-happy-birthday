@@ -30,9 +30,9 @@ define({
 				var realh = parseInt((winHeight - winWidth*h/w)/2);
 				console.log(w,h);
 				if(h/w>1.2){
-					  _that.attr('src',imgsrc).css('height',winHeight).css('padding-left',realw+'px');;
+					_that.attr('src',imgsrc).css('height',winHeight).css('padding-left',realw+'px');;
 				}else{
-					  _that.attr('src',imgsrc).css('width',winWidth).css('padding-top',realh+'px');
+					_that.attr('src',imgsrc).css('width',winWidth).css('padding-top',realh+'px');
 				}
 			}
 		});
