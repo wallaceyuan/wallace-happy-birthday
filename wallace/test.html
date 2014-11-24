@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=320.1, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
 <title>无标题文档</title>
 </head>
-<script type="text/javascript" src="../assets/js/idangerous.swiper-2.1.min.js"></script>
 <script type="text/javascript" src="../assets/js/zepto.min.js"></script>
+
+<script type="text/javascript" src="../assets/js/idangerous.swiper-2.1.min.js"></script>
 <style type="text/css">
 *{
 	margin: 0;
@@ -122,64 +123,64 @@ body{font:16px/1.5 微软雅黑;}
 	width:100%;
 	display:block;
 }
+.swiper-slide {
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
 </style>
 <body>
 
-	<div id="imgshow">
-		<div class="container">
-			<div class="banner">
-				<img src="images/imgbanner.jpg" width="100%">
+<div id="imgone">
+	<div class="pagination"></div>
+	<div class="swiper-container" id="slider">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/9.jpg">
 			</div>
-			<div class="img-list">
-				<div class='img-content'>
-					<div class="title-nav">
-						<span class="fenlei">电视剧作品</span>
-					</div>
-					<div class="clearfix">
-						<div class="img-in">
-							<img src="images/gxz.jpg">
-						</div>
-						<div class="img-in">
-							<img src="images/gxz.jpg">
-						</div>
-					</div>
-				</div>
-				<div class='img-content'>
-					<div class="title-nav">
-						<span class="fenlei">电影作品</span>
-					</div>
-					<div class="clearfix">
-						<div class="img-in">
-							<img src="images/gxz.jpg">
-						</div>
-						<div class="img-in">
-							<img src="images/gxz.jpg">
-						</div>
-					</div>
-				</div>
+			<div class="swiper-slide">
+				<img src="images/10.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/11.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/12.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/14.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/15.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/16.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/17.jpg">
 			</div>
 		</div>
 	</div>
+</div>
 
 </body>
 <script type="text/javascript">
-	
-	/*var $window = $(window);
-
+	var $window = $(window);
 	var winHeight =$window.height();
-	$(".swiper-slide").css("height",winHeight);
-	$(".container").css("height",winHeight);
-	$('.wallace_data').css("height",winHeight);
-	
-	var swiperNested1 = new Swiper("#slider1",{
+	$(".swiper-container,.swiper").css("height",winHeight); 
 
-		mode:"vertical",
+	var swiperNested = new Swiper('#slider',{
 
-		mousewheelControl:true
+				pagination: '.pagination',
 
-	});
-	var  cWidth = $('.cool').width();
-	$('.cool').height(cWidth);*/
-	
+				mode:"horizontal",
+				
+				paginationClickable: true,
+
+				mousewheelControl:true
+
+	})
+/*	$(".container").css("height",winHeight);
+*/	
 </script>
 </html>

@@ -45,7 +45,18 @@ var demoPic = {
     })
   }
 }
-
+/*图片二一*/
+var demoPicOne = {
+  route: 'demo/imgone',
+  classname: 'demo-imgone',
+  animate: 'slideInLeft',
+  view: function() {
+    var $page = this
+    requirejs(['demo.imgone'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
 
 /*蛋糕*/
 var demoNew = {
@@ -88,7 +99,7 @@ var demoTransitPage = {
 }
 
 
-$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew,demoNewMes,demoTransitPage,demoPic])
+$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew,demoNewMes,demoTransitPage,demoPic,demoPicOne])
 
 // 导航菜单面板
 var panelMenu = {
