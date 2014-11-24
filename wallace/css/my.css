@@ -110,6 +110,9 @@ a:hover, a:focus{
 	width:100%;
 	display:block;
 }
+#imgshow .container{
+	padding: 0px;
+}
 /* 第三页 祝福*/
 #slidetwo{background:#fff;}
 #slidetwo .container{position:relative;}

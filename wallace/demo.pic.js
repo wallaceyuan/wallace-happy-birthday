@@ -1,5 +1,5 @@
 define({
-	title: '档案',
+	title: '图片',
 	body:'<div class="img-container spa-scroll"><div id="imgshow"><div class="container"><div class="banner"><img src="images/imgbanner.jpg" width="100%"></div><div class="img-list"><div class="img-content"><div class="title-nav"><span class="fenlei">电视剧作品</span></div><div class="clearfix"><div class="img-in"><img src="images/gxz.jpg"></div><div class="img-in"><img src="images/gxz.jpg"></div></div></div><div class="img-content"><div class="title-nav"><span class="fenlei">电影作品</span></div><div class="clearfix"><div class="img-in"><img src="images/gxz.jpg"></div><div class="img-in"><img src="images/gxz.jpg"></div></div></div></div></div></div></div>\
 	',
 	init: function(pageData) {
