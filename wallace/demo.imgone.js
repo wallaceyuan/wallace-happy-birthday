@@ -37,6 +37,7 @@ define({
 			}
 		});
 
+
 		var swiperNested = new Swiper('#slider',{
 
 			pagination: '.page',
