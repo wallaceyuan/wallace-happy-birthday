@@ -110,11 +110,11 @@ a:hover, a:focus{
 	width:100%;
 	display:block;
 }
-#imgshow .container{
+.imgfor.container{
 	padding: 0px;
 }
 
-#imgone .swiper-slide{
+.imgfor .swiper-slide{
 	float: left;
 	position: relative;
 	overflow: hidden;
@@ -124,9 +124,18 @@ a:hover, a:focus{
 .imgfor .swiper-slide{
 	text-align: center;
 	top: 40%;
+	height: 100%;
 }
 .imgfor .swiper-slide img{
 	width: 20%;
+}
+.imgfor .pagetwo,.imgfor .pageone{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	z-index: 1000;
 }
 /* 第三页 祝福*/
 #slidetwo{background:#fff;}

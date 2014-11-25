@@ -1,6 +1,6 @@
 define({
 	title: '图片',
-	body:'<div id="imgone" class="imgfor"><div class="page"></div><div class="swiper-container" id="slider"><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/loading.gif" data-src="images/9.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/10.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/11.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/12.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/14.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/15.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/16.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/17.jpg"></div></div></div></div>\
+	body:'<div class="imgfor"><div class="pageone"></div><div class="swiper-container" id="sliderone"><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/loading.gif" data-src="images/9.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/10.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/11.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/12.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/14.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/15.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/16.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/17.jpg"></div></div></div></div>\
 		',
 	init: function(pageData) {
 		var $view = this
@@ -12,14 +12,26 @@ define({
 		}
 		
 		$('pre', $view).each(function(i, e) { hljs.highlightBlock(e) })
+		
+		if(swiperNested){
+			swiperNested.destroy();
+		}
+		
+		var swiperNested = new Swiper('#sliderone',{
 
-		var swiperNested = new Swiper('#slider',{
+			pagination: '.pageone',
+
 			mode:"horizontal",
-		});
+			
+			paginationClickable: true,
+
+			mousewheelControl:true
+
+		})
 
 		render();
-		
 
 		$('.page-container-navbar', $view).trigger('spa:scroll')
 	}
 })
+

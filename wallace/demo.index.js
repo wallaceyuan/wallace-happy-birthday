@@ -32,7 +32,7 @@ define({
 		var  cWidth = $('.cool').width();
 		$('.cool').height(cWidth);
 
-		var swiperNested1 = new Swiper("#slider1",{
+		var swiperNested = new Swiper("#slider1",{
 
 			pagination: '.pagination',
 
