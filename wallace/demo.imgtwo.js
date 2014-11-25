@@ -1,6 +1,6 @@
 define({
 	title: '图片',
-	body:'<div class="imgfor"><div class="pagetwo"></div><div class="swiper-container" id="slidertwo"><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/loading.gif" data-src="images/18.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/19.jpg"></div>s<div class="swiper-slide"><img src="images/loading.gif" data-src="images/20.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/21.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/22.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/23.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/24.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/25.jpg"></div></div></div></div>\
+	body:'<div class="imgfor"><div class="page" id="sw"><img src="images/swipe.png" width="45"></div><div class="swiper-container" id="slidertwo"><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/loading.gif" data-src="images/18.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/19.jpg"></div>s<div class="swiper-slide"><img src="images/loading.gif" data-src="images/20.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/21.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/22.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/23.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/24.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/25.jpg"></div></div></div></div>\
 		',
 	init: function(pageData) {
 		var $view = this
@@ -22,13 +22,7 @@ define({
 		}
 		var swiperNested = new Swiper('#slidertwo',{
 
-			pagination: '.pagetwo',
-
 			mode:"horizontal",
-
-			paginationClickable: true,
-
-			mousewheelControl:true
 
 		})
 

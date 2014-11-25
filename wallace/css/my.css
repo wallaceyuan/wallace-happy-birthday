@@ -122,6 +122,7 @@ a:hover, a:focus{
 	height: 100%;
 }
 .imgfor .swiper-slide{
+	background: #000;
 	text-align: center;
 	top: 40%;
 	height: 100%;
@@ -129,9 +130,9 @@ a:hover, a:focus{
 .imgfor .swiper-slide img{
 	width: 20%;
 }
-.imgfor .pagetwo,.imgfor .pageone{
+.imgfor .page{
 	position: absolute;
-	bottom: 0px;
+	bottom: 10px;
 	left: 0px;
 	width: 100%;
 	text-align: center;
