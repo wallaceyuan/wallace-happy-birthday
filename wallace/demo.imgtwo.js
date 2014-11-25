@@ -1,6 +1,6 @@
 define({
 	title: '图片',
-	body:'<div id="imgone"><div class="page"></div><div class="swiper-container" id="slider"><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/9.jpg"></div><div class="swiper-slide"><img src="images/10.jpg"></div><div class="swiper-slide"><img src="images/11.jpg"></div><div class="swiper-slide"><img src="images/12.jpg"></div><div class="swiper-slide"><img src="images/14.jpg"></div><div class="swiper-slide"><img src="images/15.jpg"></div><div class="swiper-slide"><img src="images/16.jpg"></div><div class="swiper-slide"><img src="images/17.jpg"></div></div></div></div>\
+	body:'<div id="imgone"><div class="page"></div><div class="swiper-container" id="slider"><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/loading.gif" data-src="images/18.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/19.jpg"></div>s<div class="swiper-slide"><img src="images/loading.gif" data-src="images/20.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/21.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/22.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/23.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/24.jpg"></div><div class="swiper-slide"><img src="images/loading.gif" data-src="images/25.jpg"></div></div></div></div>\
 		',
 	init: function(pageData) {
 		var $view = this
@@ -17,7 +17,7 @@ define({
 		var winHeight =$window.height();
 		$(".swiper-container,.swiper").css("height",winHeight); 
 		$('.swiper-slide img').each(function(){
-			var imgsrc = $(this).attr('src');
+			var imgsrc = $(this).attr('data-src');
 			var _that = $(this);
 			var ImageObj = new Image();
 			ImageObj.src = imgsrc;
