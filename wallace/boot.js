@@ -57,7 +57,42 @@ var demoPicOne = {
     })
   }
 }
-
+/*图片二一*/
+var demoPicTwo = {
+  route: 'demo/imgtwo',
+  classname: 'demo-imgtwo',
+  animate: 'slideInRight',
+  view: function() {
+    var $page = this
+    requirejs(['demo.imgtwo'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
+/*图片二一*/
+var demoPicThree = {
+  route: 'demo/imgthree',
+  classname: 'demo-imgthree',
+  animate: 'slideInUp',
+  view: function() {
+    var $page = this
+    requirejs(['demo.imgthree'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
+/*图片二一*/
+var demoPicFour = {
+  route: 'demo/imgfour',
+  classname: 'demo-imgfour',
+  animate: 'slideInLeft',
+  view: function() {
+    var $page = this
+    requirejs(['demo.imgfour'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
 /*蛋糕*/
 var demoNew = {
   route: 'demo/newpageright',
@@ -99,7 +134,7 @@ var demoTransitPage = {
 }
 
 
-$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew,demoNewMes,demoTransitPage,demoPic,demoPicOne])
+$doc.trigger('spa:route', [pageHome, demoNewPage,demoNew,demoNewMes,demoTransitPage,demoPic,demoPicOne,demoPicTwo,demoPicThree,demoPicFour])
 
 // 导航菜单面板
 var panelMenu = {
