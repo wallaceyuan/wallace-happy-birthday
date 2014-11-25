@@ -128,9 +128,16 @@ body{font:16px/1.5 微软雅黑;}
 	position: relative;
 	overflow: hidden;
 }
+.imgfor .swiper-slide{
+	text-align: center;
+	top: 40%;
+}
+.imgfor .swiper-slide img{
+	width: 20%;
+}
 </style>
 <body>
-	<div id="imgone">
+	<div id="imgone" class="imgfor">
 		<div class="page">
 		</div>
 		<div class="swiper-container" id="slider">
@@ -166,9 +173,29 @@ body{font:16px/1.5 微软雅黑;}
 
 </body>
 <script type="text/javascript">
-	var $window = $(window);
-	var winHeight =$window.height();
-	$(".swiper-container,.swiper").css("height",winHeight); 
+var $window = $(window);
+var winHeight =$window.height();
+$(".swiper-container,.swiper").css("height",winHeight); 
+$('.swiper-slide img').each(function(){
+	var imgsrc = $(this).attr('data-src');
+	var _that = $(this);
+	var ImageObj = new Image();
+	ImageObj.src = imgsrc;
+	ImageObj.onload = function(){
+		var w = this.width;
+		var h = this.height;
+		var winWidth = $window.width();
+		var winHeight = $window.height();
+		var realw = parseInt((winWidth - winHeight*w/h)/2);
+		var realh = parseInt((winHeight - winWidth*h/w)/2);
+		console.log(w,h);
+		if(h/w>1.2){
+			_that.attr('src',imgsrc).css('height',winHeight).css('padding-left',realw+'px').width('auto');
+		}else{
+			_that.attr('src',imgsrc).css('width',winWidth).css('padding-top',realh+'px');
+		}
+	}
+});
 
 	var swiperNested = new Swiper('#slider',{
 
