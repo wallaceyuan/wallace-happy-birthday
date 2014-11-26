@@ -169,7 +169,7 @@ a:hover, a:focus{
 #index_home{background:#09090a;}
 #index_home .container{position:relative;}
 #index_home .homeW{height: 100%;width: 100%;text-align: center;}
-#index_home .homeW .portrait{width:40%;max-width: 360px;display: inline-block;}
+#index_home .homeW .portrait{width:40%;max-width: 360px;display: inline-block;top: 30%;left: 30%;position: absolute;}
 #index_home .homeW .portrait i{display:block;padding:5%;width:100%;border-radius:50%;background:#5d6d7e;}
 #index_home .homeW .portrait i img{display:block;width:100%;border:1px solid #393a18;border-radius:50%;vertical-align:middle;}
 #index_home .homeW .cool{width: 20%;max-width: 120px;max-height: 120px;}
