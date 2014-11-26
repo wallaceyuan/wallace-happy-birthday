@@ -10,7 +10,6 @@ define({
 		url = url || location.href
 		return url.replace(/^[^#]*#?\/?(.*)\/?$/, '$1')
 		}
-		
 		$('pre', $view).each(function(i, e) { hljs.highlightBlock(e) })
 
 		var $window = $(window);
