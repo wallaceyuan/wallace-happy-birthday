@@ -135,8 +135,11 @@ a:hover, a:focus{
 }
 .imgfor .swiper-slide i{
 	display: inline-block;
-	width: 62px;
-	height: 62px;
+	width: 10%;
+	height: 10%;
+	position: absolute;
+	top: 40%;
+	left: 40%;
 }
 /* 第三页 祝福*/
 #slidetwo{background:#fff;}
