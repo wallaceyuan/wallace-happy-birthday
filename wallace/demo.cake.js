@@ -1,7 +1,7 @@
 define({
 	title: 'Cake',
-	body:'<div class="swiper-slide" id="slideone"><div class="container"><div class="balloon"><div><span>☺</span></div><div><span>B</span></div><div><span>D</span></div><div><span>A</span></div><div><span>Y</span></div><div><span>!</span></div></div><div class="wallace_eat animated"><i><img src="images/wallaceeat.jpg"></i></div><div class="cakw"><i><img src="images/cake.png"></i></div></div><svg class="swiper-polyline"><polyline points="0 10,10 2,20 10" stroke="white" stroke-width="3" fill="none"><animate attributename="opacity" from="1" to="0.2" dur="1s" accumulate="none" repeatcount="indefinite"></animate></polyline><polyline points="0 20,10 12,20 20" stroke="white" stroke-width="3" fill="none"><animate attributename="opacity" from="1" to="0.2" dur="1s" accumulate="none" repeatcount="indefinite"></animate></polyline></svg></div>\
-	',
+	body:'<div class="swiper-slide" id="slideone"><div class="container"><div class="balloon"><div><span>☺</span></div><div><span>B</span></div><div><span>D</span></div><div><span>A</span></div><div><span>Y</span></div><div><span>!</span></div></div><div class="wallace_eat animated"><i><img src="images/wallaceeat.jpg"></i></div><div class="cakw"><i><img src="images/cake.png"></i></div></div></div>\
+		',
 	init: function(pageData) {
 		var $view = this
 		
