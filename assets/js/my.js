@@ -42,7 +42,7 @@ appId:"",
 MsgImg:"http://wallaceyuan.github.io/wallace/images/index1.jpg", 
 TLImg:"http://wallaceyuan.github.io/wallace/images/index1.jpg", 
 url:"http://wallaceyuan.github.io",
-title:"小哇，生日快乐！", 
+title:"钟汉良，生日快乐！", 
 desc:"脑残花痴梅菜花技术渣粉圆大圈送上，做得不好求轻拍", 
 fakeid:"", 
 callback:function(){} 
