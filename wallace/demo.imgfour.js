@@ -1,8 +1,8 @@
 define({
 	title: '图片',
-	body:'<div class="imgfor"><div class="page" id="sw"><img src="images/swipe.png" width="45"></div><div class="swiper-container" id="sliderfour"><div class="swiper-wrapper"><div class="swiper-slide"><img data-src="images/18.jpg"></div><div class="swiper-slide"><img data-src="images/19.jpg"></div><div class="swiper-slide"><img data-src="images/20.jpg"></div><div class="swiper-slide"><img data-src="images/21.jpg"></div><div class="swiper-slide"><img data-src="images/22.jpg"></div><div class="swiper-slide"><img data-src="images/23.jpg"></div><div class="swiper-slide"><img data-src="images/24.jpg"></div><div class="swiper-slide"><img data-src="images/25.jpg"></div></div></div></div>\
+	body:'<div class="imgfor"><div class="page" id="sw"><img src="images/swipe.png" width="45"></div><div class="swiper-container" id="sliderfour"><div class="swiper-wrapper"><div class="swiper-slide"><img data-src="images/y79.jpg"></div><div class="swiper-slide"><img data-src="images/y10.jpg"></div><div class="swiper-slide"><img data-src="images/y54.jpg"></div><div class="swiper-slide"><img data-src="images/y65.jpg"></div><div class="swiper-slide"><img data-src="images/y76.jpg"></div></div></div></div>\
 		',
-	init: function(pageData) {
+		init: function(pageData) {
 		var $view = this
 		
 		// 获取hash
